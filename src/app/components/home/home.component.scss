@@ -1,0 +1,212 @@
+:host {
+  .container {
+    display: flex;
+    color: black;
+    background: linear-gradient(
+        to right,
+        rgba(245, 245, 245, 0.8),
+        rgba(245, 245, 245, 0.8)
+      ),
+      url(../../../assets/img/common-bg.svg);
+    background-position: center;
+    height: 100vh;
+    min-height: 50rem;
+    max-height: 120rem;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 50% 100%, 0% 95%);
+
+    .social-icons {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      left: 0;
+      top: 25%;
+      height: fit-content;
+
+      .button {
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin: 5px 0;
+        background-color: #f06;
+        border-radius: 50px;
+        cursor: pointer;
+        overflow: hidden;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+        background: #fff;
+        transition: all 0.3s ease-out;
+
+        .icon {
+          display: inline-block;
+          height: 60px;
+          width: 60px;
+          text-align: center;
+          border-radius: 50px;
+          box-sizing: border-box;
+          line-height: 60px;
+          transition: all 0.3s ease-out;
+
+          i {
+            font-size: 25px;
+            line-height: 60px;
+            transition: all 0.3s ease-out;
+          }
+        }
+
+        span {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 60px;
+          margin-left: 10px;
+          transition: all 0.3s ease-out;
+        }
+      }
+
+      .button:hover {
+        width: 13em;
+        overflow: hidden;
+
+        .icon i {
+          color: var(--white);
+        }
+      }
+
+      .button:nth-child(1):hover .icon {
+        background: #4267b2;
+      }
+      .button:nth-child(2):hover .icon {
+        background: #205f7f;
+      }
+      .button:nth-child(3):hover .icon {
+        background: radial-gradient(
+          circle at 30% 107%,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
+      }
+      .button:nth-child(4):hover .icon {
+        background: #333;
+      }
+      .button:nth-child(5):hover .icon {
+        background: #ff0000;
+      }
+
+      // span text
+
+      .button:nth-child(1):hover span {
+        color: #4267b2;
+      }
+      .button:nth-child(2):hover span {
+        color: #205f7f;
+      }
+      .button:nth-child(3):hover span {
+        color: #e1306c;
+      }
+      .button:nth-child(4):hover span {
+        color: #333;
+      }
+      .button:nth-child(5):hover span {
+        color: #ff0000;
+      }
+    }
+
+    .home {
+      display: grid;
+      padding: 1rem 2rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 80rem;
+      height: auto;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 0.3fr;
+      row-gap: 10px;
+      place-items: center;
+
+      h1 {
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        text-align: center;
+        color: var(--black);
+        font-weight: 700;
+        letter-spacing: 2px;
+        white-space: normal;
+        line-height: 60px;
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 100rem;
+
+        p {
+          width: fit-content;
+          font-size: 1rem;
+          line-height: 1.5;
+          -webkit-line-clamp: 5;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          color: #333;
+          text-align: center;
+        }
+      }
+
+      .btn {
+        place-self: start;
+        justify-self: center;
+
+        button {
+          width: 200px;
+          height: 50px;
+          background: #7843e9;
+          color: #fff;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          display: inline-block;
+          font-weight: 700;
+          border-radius: 5px;
+          box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+  }
+}
+
+//pc
+:host.pc {
+  .container {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%);
+
+    .home {
+      grid-template-rows: 1fr 1fr 0.5fr;
+      padding: 3rem 5rem;
+
+      .name {
+        font-size: 4.5rem;
+        font-weight: 800;
+        letter-spacing: 3px;
+        place-self: end;
+        justify-self: center;
+      }
+
+      .info {
+        max-width: 50rem;
+        p {
+          font-size: 1.5rem;
+          -webkit-line-clamp: 3;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}
