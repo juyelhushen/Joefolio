@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+
+:root {
+  --purple: hsl(271, 76%, 53%);
+  --green: #64ffda;
+  --green-light: #B9F6CA;
+  --gray-light: #BDBDBD;
+  --dark-gray: #263238;
+  --black: #212121;
+  --white: #fff;
+  --white-gray: #fafafa;;
+}
+
+
+* {
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--dark-gray);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1500px;
+  outline: 0px solid white;
+  overflow: hidden;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: var(--gray-light);
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+  color: var(--black);
+}
+
+
+
+

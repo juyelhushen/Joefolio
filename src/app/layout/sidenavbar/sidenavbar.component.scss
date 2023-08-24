@@ -1,0 +1,14 @@
+.example-container {
+
+  margin: 0 auto;
+  overflow: none;
+}
+
+mat-drawer-content {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-drawer {
+  width: 80%;
+}
