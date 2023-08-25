@@ -1,0 +1,178 @@
+:host {
+    .container {
+      display: flex;
+      color: black;
+      height: auto;
+      min-height: 50rem;
+      position: relative;
+      flex-direction: column;
+      background-color: var(--white);
+  
+      h2 {
+        position: relative;
+        top: 1rem;
+        display: grid;
+        padding: 1rem 2rem;
+        grid-template-rows: repeat(2, 1fr);
+        place-items: center;
+        row-gap: 2rem;
+  
+        .heading-sec__main {
+          display: block;
+          font-size: 3rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          letter-spacing: 3px;
+          text-align: center;
+          position: relative;
+        }
+  
+        .heading-sec__main::after {
+          content: "";
+          position: absolute;
+          top: calc(100% + 1.8rem);
+          // top: calc(100% + 1.5rem);
+          height: 5px;
+          width: 3rem;
+          background: #7843e9;
+          left: 50%;
+          transform: translateX(-50%);
+          border-radius: 5px;
+        }
+  
+        .heading-sec__sub {
+          white-space: normal;
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-align: center;
+          color: #555;
+          font-size: 1rem;
+          font-weight: 300;
+          max-width: 60rem;
+          margin: auto;
+          line-height: 1.6;
+        }
+      }
+  
+      .projects__content {
+        display: block;
+        padding: 1rem 2rem;
+  
+        .projects__row {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-gap: 2rem;
+          margin-bottom: 4rem;
+  
+          .projects__row-img-cont {
+            overflow: hidden;
+  
+            .projects__row-img {
+              width: 100%;
+              display: block;
+              object-fit: cover;
+            }
+          }
+  
+          .projects__row-content {
+            padding: 2rem 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+  
+            .projects__row-content-title {
+              letter-spacing: 2px;
+              font-weight: 600;
+              font-size: 1.5rem;
+              margin-bottom: 1rem;
+            }
+  
+            .projects__row-content-desc {
+              font-size: 1rem;
+              color: #666;
+              max-width: 60rem;
+              line-height: 1.7;
+              margin-bottom: 3rem;
+              text-align: center;
+            }
+  
+            .btn {
+              text-align: left;
+  
+              button {
+                width: 200px;
+                height: 50px;
+                background: #7843e9;
+                color: #fff;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                display: inline-block;
+                font-weight: 700;
+                letter-spacing: 2px;
+                border-radius: 5px;
+                box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  :host.pc {
+    .container {
+      h2 {
+        padding: 3rem 5rem;
+        position: relative;
+        top: 2rem;
+  
+        .heading-sec__main {
+          font-size: 3.5rem;
+          font-weight: 600;
+        }
+  
+        .heading-sec__main::after {
+          top: calc(100% + 1.5rem);
+          height: 7px;
+          width: 4rem;
+        }
+  
+        .heading-sec__sub {
+          -webkit-line-clamp: 2;
+          font-weight: 500;
+          font-size: 1.2rem;
+          max-width: 50rem;
+        }
+      }
+  
+      .projects__content {
+        display: block;
+        padding: 3rem 5rem;
+  
+        .projects__row {
+          display: grid;
+          grid-template-columns: 1.5fr 1fr;
+          grid-gap: 4rem;
+          // place-items: left;
+  
+          .projects__row-content {
+            place-items: start;
+  
+            .projects__row-content-title {
+              font-weight: 700;
+              font-size: 2rem;
+              margin-bottom: 1rem;
+            }
+  
+            .projects__row-content-desc {
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+  
