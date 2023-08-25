@@ -13,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ResponsiveDirective } from './directives/responsive.directive';
 import { MaterialModule } from './shared/material-module';
 import { TopbarComponent } from './layout/topbar/topbar.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { TopbarComponent } from './layout/topbar/topbar.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

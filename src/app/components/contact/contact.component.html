@@ -1,1 +1,114 @@
-<p>contact works!</p>
+<div class="container">
+  <h2 class="heading heading-sec heading-sec__mb-med">
+    <span class="heading-sec__main heading-sec__main--lt">Contact</span>
+    <span class="heading-sec__sub heading-sec__sub--lt">
+      Feel free to Contact me by submitting the form below and I will get back
+      to you as soon as possible.
+    </span>
+  </h2>
+  <div class="contact__form-container">
+    <form action="" class="contactForm">
+      <mat-grid-list
+        cols="4"
+        rowHeight="80px"
+        gutterSize="5px"
+        [formGroup]="contactForm"
+      >
+        <mat-grid-tile colspan="4">
+          <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input
+              matInput
+              formControlName="name"
+              type="text"
+              placeholder="Enter Your Name"
+            />
+            <mat-error
+              *ngIf="
+                contactForm.controls.name.touched &&
+                contactForm.controls.name.invalid
+              "
+            >
+              <span *ngIf="contactForm.controls.name.errors.pattern"
+                >This is invalid name,Please Check.</span
+              >
+            </mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="4">
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input
+              matInput
+              formControlName="email"
+              type="text"
+              placeholder="Enter Your Email"
+            />
+            <mat-error
+              *ngIf="
+                contactForm.controls.email.touched &&
+                contactForm.controls.email.invalid
+              "
+            >
+              <span *ngIf="contactForm.controls.email.errors.pattern"
+                >Invalid Email, Please provide a valid email.</span
+              >
+            </mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="4">
+          <mat-form-field appearance="fill">
+            <mat-label>Mobile Number</mat-label>
+            <input
+              matInput
+              formControlName="number"
+              type="text"
+              placeholder="Enter Your Mobile Number."
+            />
+            <mat-error
+              *ngIf="
+                contactForm.controls.number.touched &&
+                contactForm.controls.number.invalid
+              "
+            >
+              <span *ngIf="contactForm.controls.number.errors.pattern"
+                >Invalid Mobile number, Please cheack.</span
+              >
+              <span *ngIf="contactForm.controls.number.errors.maxlength"
+                >Mobile number can not be more than 10 digit.</span
+              >
+            </mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="4" rowspan="2">
+          <mat-form-field appearance="fill">
+            <mat-label>Message</mat-label>
+            <textarea
+              matInput
+              formControlName="message"
+              id=""
+              cols="4"
+              rows="5"
+              placeholder="Write Your Message here ..."
+            ></textarea>
+            <mat-error
+              *ngIf="
+                contactForm.controls.message.touched &&
+                contactForm.controls.message.invalid
+              "
+            >
+              <span *ngIf="contactForm.controls.message.errors.minlength"
+                >Message should contains atleast 20 letters.</span
+              >
+            </mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="4">
+          <div class="btn">
+            <button mat-raised-button color="primary" class="btn">Send</button>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </form>
+  </div>
+</div>
