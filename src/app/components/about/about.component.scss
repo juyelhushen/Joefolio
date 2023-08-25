@@ -1,0 +1,194 @@
+:host {
+  .container {
+    display: flex;
+    color: black;
+    height: auto;
+    min-height: 50rem;
+    position: relative;
+    flex-direction: column;
+    background-color: var(--white-gray);
+
+    h2 {
+      position: relative;
+      top: 1rem;
+      display: grid;
+      padding: 1rem 2rem;
+      grid-template-rows: repeat(2, 1fr);
+      place-items: center;
+      row-gap: 2rem;
+
+      .heading-sec__main {
+        display: block;
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        letter-spacing: 3px;
+        text-align: center;
+        position: relative;
+      }
+
+      .heading-sec__main::after {
+        content: "";
+        position: absolute;
+        top: calc(100% + 1.8rem);
+        // top: calc(100% + 1.5rem);
+        height: 5px;
+        width: 3rem;
+        background: #7843e9;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 5px;
+      }
+
+      .heading-sec__sub {
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-align: center;
+        color: #555;
+        font-size: 1rem;
+        font-weight: 300;
+        max-width: 60rem;
+        margin: auto;
+        line-height: 1.6;
+      }
+    }
+
+    .about__content {
+      display: grid;
+      padding: 1rem 2rem;
+      position: relative;
+      top: 2rem;
+      grid-template-columns: 1fr;
+      grid-gap: 4rem;
+      background-color: var(--white-gray);
+
+      .about__content-main {
+        display: block;
+
+        .about__content-title {
+          font-weight: 600;
+          font-size: 1.5rem;
+          // font-size: 2.8rem;
+          margin-bottom: 3rem;
+        }
+
+        .about__content-details {
+          .about__content-details-para {
+            font-size: 1rem;
+            color: #666;
+            max-width: 60rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+          }
+        }
+
+        .btn {
+          text-align: left;
+
+          button {
+            width: 200px;
+            height: 50px;
+            background: #7843e9;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            font-weight: 700;
+            letter-spacing: 2px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+          }
+        }
+      }
+
+      .about__content-skills {
+        display: block;
+
+        .about__content-title {
+          font-weight: 600;
+          font-size: 1.5rem;
+          // font-size: 2.8rem;
+          margin-bottom: 3rem;
+        }
+
+        .skills {
+          display: flex;
+          flex-wrap: wrap;
+          padding-bottom: 6rem;
+
+          .skills_icon {
+            text-align: center;
+            padding: 0.7rem 1rem;
+            margin-bottom: 1.2rem;
+            margin-right: 1rem;
+            // font-size: 1rem;
+            background: rgba(153, 153, 153, 0.2);
+            border-radius: 5px;
+            font-weight: 500;
+
+            img {
+              margin: 0 auto;
+              width: 50px;
+              height: auto;
+              -webkit-filter: grayscale(100%);
+              filter: grayscale(100%);
+              -webkit-transition: all 0.3s ease-in-out;
+              -moz-transition: all 0.3s ease-in-out;
+              transition: all 0.3s ease-in-out;
+            }
+
+            img:hover {
+              -webkit-filter: grayscale(0);
+            }
+
+            .img-responsive {
+              display: block;
+              max-width: 100%;
+              height:auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//pc
+
+:host.pc {
+  .container {
+    h2 {
+      padding: 3rem 5rem;
+      position: relative;
+      top: 2rem;
+
+      .heading-sec__main {
+        font-size: 3.5rem;
+        font-weight: 600;
+      }
+
+      .heading-sec__main::after {
+        top: calc(100% + 1.5rem);
+        height: 7px;
+        width: 4rem;
+      }
+
+      .heading-sec__sub {
+        padding-top: 10px;
+        -webkit-line-clamp: 2;
+        font-weight: 500;
+        font-size: 1.2rem;
+        max-width: 50rem;
+      }
+    }
+
+    .about__content {
+      padding: 3rem 5rem;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 8rem;
+    }
+  }
+}
