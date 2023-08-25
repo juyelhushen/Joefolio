@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TooltipPosition } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-footer',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  tooltipPostion: TooltipPosition = 'after';
 }
