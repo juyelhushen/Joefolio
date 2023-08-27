@@ -1,5 +1,4 @@
 .example-container {
-
   margin: 0 auto;
   overflow: none;
 }
@@ -7,8 +6,132 @@
 mat-drawer-content {
   display: flex;
   flex-direction: column;
+  background-color: var(--dark-gray);
 }
 
-mat-drawer {
-  width: 80%;
+.circularDrawer {
+  position: fixed;
+  width: 100%;
+  clip-path: circle(400px at right 30px);
+
+  .drawerInfo {
+    display: flex;
+    background-color: var(--gray-light);
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+      display: flex;
+      list-style: none;
+      flex-direction: column;
+      margin-top: -14rem;
+      margin-left: 7rem;
+
+      li {
+        margin: 1em;
+
+        a {
+          font-size: 20px;
+          letter-spacing: 1px;
+          font-weight: 500;
+          text-decoration: none;
+          padding: 0.2em 1.2em 0.9em 1.2em;
+          border-radius: 10px 10px 0 0;
+          color: rgb(39, 39, 39);
+          transition: all 0.3s ease;
+          position: relative;
+          z-index: 1;
+        }
+
+        a::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 41px;
+          border-radius: 10px 10px 0 0;
+          background: #853333;
+          transform-origin: bottom;
+          background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+          transform: scaleY(0.05);
+          z-index: -1;
+          transition: all 0.4s;
+        }
+
+        a:hover::before {
+          transform: scaleY(1.1);
+        }
+
+        a:hover {
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
+
+@media (300px <= width <= 400px) {
+  .circularDrawer {
+    clip-path: circle(350px at right 30px);
+
+    .drawerInfo {
+      ul {
+        margin-top: -29rem;
+        margin-left: 9rem;
+      }
+    }
+  }
+}
+
+@media (400px <= width <= 500px) {
+  .circularDrawer {
+    clip-path: circle(450px at right 30px);
+
+    .drawerInfo {
+      ul {
+        margin-top: -26rem;
+        margin-left: 7rem;
+      }
+    }
+  }
+}
+
+@media (500px <= width <= 600px) {
+  .circularDrawer {
+    clip-path: circle(550px at right 30px);
+
+    .drawerInfo {
+      ul {
+        margin-top: -20rem;
+        margin-left: 7rem;
+      }
+    }
+  }
+}
+@media (600px <= width <= 700px) {
+  .circularDrawer {
+    clip-path: circle(650px at right 30px);
+
+    .drawerInfo {
+      ul {
+        margin-top: -18rem;
+        margin-left: 7rem;
+      }
+    }
+  }
+}
+
+@media (700px <= width <= 800px) {
+  .circularDrawer {
+    clip-path: circle(750px at right 30px);
+
+    .drawerInfo {
+      ul {
+        margin-top: -12rem;
+        margin-left: 7rem;
+      }
+    }
+  }
 }

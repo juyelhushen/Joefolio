@@ -10,6 +10,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 export class TopbarComponent {
 
   @Output() sidenavToggle = new EventEmitter<void>();
+  
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
 
   public isMobile = false;

@@ -3,7 +3,16 @@
 
 
   <mat-drawer-container class="example-container" hasBackdrop='true'>
-  <mat-drawer #drawer mode='over'>I'm a drawer</mat-drawer>
+  <mat-drawer class="circularDrawer"  #drawer mode='over' position="end" opened>
+    <div class="drawerInfo">
+      <ul>
+        <li><a href="#" style="--i: 0">Home</a></li>
+        <li><a href="#" style="--i: 0">About</a></li>
+        <li><a href="#" style="--i: 0">Projects</a></li>
+        <li><a href="#" style="--i: 0">Contact</a></li>
+      </ul>
+    </div>
+  </mat-drawer>
   <mat-drawer-content>
     <app-home Responsive></app-home>
     <app-about Responsive></app-about>

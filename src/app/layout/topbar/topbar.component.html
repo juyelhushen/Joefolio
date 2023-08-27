@@ -8,16 +8,16 @@
     </div>
 
     <span class="spacer"></span>
-    <div class="nav-items" *ngIf="!isMobile">
+    <div class="navItems" *ngIf="!isMobile">
       <ul>
-        <li><a href="">HOME</a></li>
-        <li><a href="">ABOUT</a></li>
-        <li><a href="">PROJECTS</a></li>
-        <li><a href="">CONTACT</a></li>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="contact">CONTACT</a></li>
       </ul>
     </div>
 
-    <div class="sidenav-toggle" (click)="toggleSidenav()">
+    <div class="sidenav-toggle" (click)="toggleSidenav()" *ngIf="isMobile" >
       <button mat-icon-button color="primary" >
         <mat-icon>menu</mat-icon>
       </button>
