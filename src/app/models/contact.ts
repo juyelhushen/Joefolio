@@ -1,8 +1,8 @@
 export class Contact {
-  
+
   name!:string;
   email!:string;
-  number!:number;
+  subject!:string;
   message!:string;
 
 }

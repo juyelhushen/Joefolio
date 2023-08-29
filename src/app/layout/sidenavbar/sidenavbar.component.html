@@ -1,26 +1,29 @@
-
 <div class="container">
-
-
-  <mat-drawer-container class="example-container" hasBackdrop='true'>
-  <mat-drawer class="circularDrawer"  #drawer mode='over' position="end" opened>
-    <div class="drawerInfo">
-      <ul>
-        <li><a href="#" style="--i: 0">Home</a></li>
-        <li><a href="#" style="--i: 0">About</a></li>
-        <li><a href="#" style="--i: 0">Projects</a></li>
-        <li><a href="#" style="--i: 0">Contact</a></li>
-      </ul>
-    </div>
-  </mat-drawer>
-  <mat-drawer-content>
-    <app-home Responsive></app-home>
-    <app-about Responsive></app-about>
-    <app-projects Responsive></app-projects>
-    <app-contact Responsive></app-contact>
-    <app-footer Responsive></app-footer>
-
-  </mat-drawer-content>
-</mat-drawer-container>
-
+  <mat-drawer-container class="example-container" hasBackdrop="true">
+    <mat-drawer class="circularDrawer" #drawer mode="over" position="end">
+      <div class="drawerInfo">
+        <ul (click)="toggleSidenav()">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </mat-drawer>
+    <mat-drawer-content>
+      <div id="home">
+        <app-home Responsive></app-home>
+      </div>
+      <div id="about">
+        <app-about Responsive></app-about>
+      </div>
+      <div id="projects">
+        <app-projects Responsive></app-projects>
+      </div>
+      <div id="contact">
+        <app-contact Responsive></app-contact>
+      </div>
+      <app-footer Responsive></app-footer>
+    </mat-drawer-content>
+  </mat-drawer-container>
 </div>

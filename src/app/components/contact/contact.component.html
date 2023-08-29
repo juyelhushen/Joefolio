@@ -7,7 +7,7 @@
     </span>
   </h2>
   <div class="contact__form-container">
-    <form action="" class="contactForm">
+    <form action="javacript:void(0)" class="contactForm" (submit)="onSubmit()" >
       <mat-grid-list
         cols="4"
         rowHeight="80px"
@@ -16,7 +16,7 @@
       >
         <mat-grid-tile colspan="4">
           <mat-form-field appearance="fill">
-            <mat-label>Name</mat-label>
+            <mat-label>Full Name</mat-label>
             <input
               matInput
               formControlName="name"
@@ -58,24 +58,21 @@
         </mat-grid-tile>
         <mat-grid-tile colspan="4">
           <mat-form-field appearance="fill">
-            <mat-label>Mobile Number</mat-label>
+            <mat-label>Subject</mat-label>
             <input
               matInput
-              formControlName="number"
+              formControlName="subject"
               type="text"
-              placeholder="Enter Your Mobile Number."
+              placeholder="Enter Your Subject."
             />
             <mat-error
               *ngIf="
-                contactForm.controls.number.touched &&
-                contactForm.controls.number.invalid
+                contactForm.controls.subject.touched &&
+                contactForm.controls.subject.invalid
               "
             >
-              <span *ngIf="contactForm.controls.number.errors.pattern"
-                >Invalid Mobile number, Please cheack.</span
-              >
-              <span *ngIf="contactForm.controls.number.errors.maxlength"
-                >Mobile number can not be more than 10 digit.</span
+              <span *ngIf="contactForm.controls.subject.errors.minlength"
+                >Subject length must be 10 .</span
               >
             </mat-error>
           </mat-form-field>
@@ -105,7 +102,7 @@
         </mat-grid-tile>
         <mat-grid-tile colspan="4">
           <div class="btn">
-            <button mat-raised-button color="primary" class="btn">Send</button>
+            <button type="submit"  mat-raised-button color="primary" class="btn">Send</button>
           </div>
         </mat-grid-tile>
       </mat-grid-list>
