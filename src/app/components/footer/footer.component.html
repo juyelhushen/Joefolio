@@ -31,10 +31,22 @@
             </div>
           </div>
         </div>
-        <mat-divider class="divider" ></mat-divider>
+        <mat-divider class="divider"></mat-divider>
         <div class="page-scroll">
-          <a id="to-top" class="page-scroll" href="#page-top">
-            <img id="rocket" src="../../../assets/img/rocket.png"  matTooltip="Beam me up, Scotty!"  [matTooltipPosition]='tooltipPostion' [matTooltipShowDelay]='300'  [matTooltipHideDelay]="300" />
+          <a
+            id="to-top"
+            class="page-scroll"
+            href="#page-top"
+            (click)="scrollToTopWithDelay(500)"
+          >
+            <img
+              id="rocket"
+              src="../../../assets/img/rocket.png"
+              matTooltip="Lift me up, rocketty"
+              [matTooltipPosition]="tooltipPosition"
+              [matTooltipShowDelay]="300"
+              [matTooltipHideDelay]="300"
+            />
           </a>
         </div>
         <mat-divider></mat-divider>
