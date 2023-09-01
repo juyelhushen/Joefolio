@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 import { Contact } from 'src/app/models/contact';
 import { environment } from 'src/environments/environment';
 import { SnackbarService } from 'src/app/services/snackbar.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -12,14 +13,16 @@ import { SnackbarService } from 'src/app/services/snackbar.service';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
-
   responseMessage: any;
   key = environment.emailJSKey;
 
   contactForm: any = FormGroup;
 
-  constructor(private fb: FormBuilder,
-    private snackbar:SnackbarService) {}
+  constructor(
+    private fb: FormBuilder,
+    private snackbar: SnackbarService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.contactForm = this.fb.group({
@@ -29,8 +32,6 @@ export class ContactComponent {
       message: [null, [Validators.minLength(20)]],
     });
   }
-
-
 
   async onSubmit() {
     emailjs.init(this.key);
@@ -42,8 +43,9 @@ export class ContactComponent {
       subject: formData.subject,
       message: formData.message,
     });
+    this.router.navigate(['/confirm']);
     this.responseMessage = 'Thank you .';
-    this.snackbar.openSnackBar(this.responseMessage,'')
+    this.snackbar.openSnackBar(this.responseMessage, '');
     this.contactForm.reset();
   }
 }

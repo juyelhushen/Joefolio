@@ -14,6 +14,7 @@ import { ResponsiveDirective } from './directives/responsive.directive';
 import { MaterialModule } from './shared/material-module';
 import { TopbarComponent } from './layout/topbar/topbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProjectsComponent,
     ContactComponent,
     FooterComponent,
-    ResponsiveDirective
+    ResponsiveDirective,
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,

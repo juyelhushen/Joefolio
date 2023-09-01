@@ -1,2 +1,2 @@
-<app-topbar (sidenavToggle)="sidenav.toggleSidenav()" Responsive></app-topbar>
-<app-sidenavbar  #sidenav></app-sidenavbar>
+<app-sidenavbar *ngIf="!isConfirmationRoute"> </app-sidenavbar>
+<router-outlet></router-outlet>
