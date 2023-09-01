@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
 
+
+  redirectToContct = () => {
+    window.location.href = '#contact';
+  };
 }

@@ -1,23 +1,23 @@
 <div class="container">
   <div class="social-icons" *ngIf="isMobile">
     <div class="button">
-      <div class="icon"><i class="bx bxl-facebook"></i></div>
+      <div class="icon" ><i class="bx bxl-facebook" (click)="redirectToFB()"></i></div>
       <span>Facebook</span>
     </div>
     <div class="button">
-      <div class="icon"><i class="bx bxl-linkedin"></i></div>
+      <div class="icon" (click)='redirectToLinkdin()'><i class="bx bxl-linkedin"></i></div>
       <span>Linkedin</span>
     </div>
     <div class="button">
-      <div class="icon"><i class="bx bxl-instagram-alt"></i></div>
+      <div class="icon"><i class="bx bxl-instagram-alt" (click)='redirectToInsta()'></i></div>
       <span>Instagram</span>
     </div>
     <div class="button">
-      <div class="icon"><i class="bx bxl-github"></i></div>
+      <div class="icon"><i class="bx bxl-github" (click)='redirectToGithub()'></i></div>
       <span>Github</span>
     </div>
     <div class="button">
-      <div class="icon"><i class="bx bxl-youtube"></i></div>
+      <div class="icon"><i class="bx bxl-youtube" (click)='redirectToYoutube()'></i></div>
       <span>Youtube</span>
     </div>
   </div>
@@ -31,7 +31,7 @@
       </p>
     </div>
     <div class="btn">
-      <button mat-raised-button color="primary">Projects</button>
+      <button mat-raised-button (click)='redirectToProject()' color="primary">Projects</button>
     </div>
   </div>
   <div class="email">

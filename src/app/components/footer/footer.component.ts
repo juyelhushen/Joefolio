@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TooltipPosition } from '@angular/material/tooltip';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-footer',
@@ -17,4 +18,26 @@ export class FooterComponent {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }, delay);
   }
+
+
+  redirectToLinkdin = (): void => {
+    window.open(environment.linkedinLink, '-blank');
+  };
+
+  redirectToYoutube = () => {
+    window.open(environment.youtubeLink, '-blank');
+  };
+
+  redirectToFB = () => {
+    window.open(environment.fbLink, '-blank');
+  };
+
+  redirectToGithub = () => {
+    window.open(environment.githubLink, '-blank');
+  };
+
+  redirectToInsta = () => {
+    window.open(environment.instaLink, '-blank');
+  };
+
 }
