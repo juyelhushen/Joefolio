@@ -1,40 +1,56 @@
 <div class="container">
-  <div class="social-icons" *ngIf="isMobile">
-    <div class="button">
-      <div class="icon" ><i class="bx bxl-facebook" (click)="redirectToFB()"></i></div>
-      <span>Facebook</span>
+  <div class="homeContainer">
+    <div class="socialIcons" *ngIf="isMobile">
+      <div class="button">
+        <div class="icon">
+          <i class="bx bxl-facebook" (click)="redirectToFB()"></i>
+        </div>
+        <span>Facebook</span>
+      </div>
+      <div class="button">
+        <div class="icon" (click)="redirectToLinkdin()">
+          <i class="bx bxl-linkedin"></i>
+        </div>
+        <span>Linkedin</span>
+      </div>
+      <div class="button">
+        <div class="icon">
+          <i class="bx bxl-instagram-alt" (click)="redirectToInsta()"></i>
+        </div>
+        <span>Instagram</span>
+      </div>
+      <div class="button">
+        <div class="icon">
+          <i class="bx bxl-github" (click)="redirectToGithub()"></i>
+        </div>
+        <span>Github</span>
+      </div>
+      <div class="button">
+        <div class="icon">
+          <i class="bx bxl-youtube" (click)="redirectToYoutube()"></i>
+        </div>
+        <span>Youtube</span>
+      </div>
     </div>
-    <div class="button">
-      <div class="icon" (click)='redirectToLinkdin()'><i class="bx bxl-linkedin"></i></div>
-      <span>Linkedin</span>
+    <div class="homeContent">
+      <h1 class="name">Hey, I'm Juyel Hushen</h1>
+      <div class="info">
+        <p>
+          I'm a Full Stack developer based in Chennai, Taminadu, India. I have
+          worked on many types of Full-Stack from fintech applications to
+          Ecommerce booking platforms.
+        </p>
+      </div>
+      <div class="btn">
+        <button mat-raised-button (click)="redirectToProject()" color="primary">
+          Projects
+        </button>
+      </div>
     </div>
-    <div class="button">
-      <div class="icon"><i class="bx bxl-instagram-alt" (click)='redirectToInsta()'></i></div>
-      <span>Instagram</span>
+    <div class="scrollDown" (click)="redirectToAbout()">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <div class="button">
-      <div class="icon"><i class="bx bxl-github" (click)='redirectToGithub()'></i></div>
-      <span>Github</span>
-    </div>
-    <div class="button">
-      <div class="icon"><i class="bx bxl-youtube" (click)='redirectToYoutube()'></i></div>
-      <span>Youtube</span>
-    </div>
-  </div>
-  <div class="home">
-      <h1 class="name" >Hey, I'm Juyel Hushen</h1>
-    <div class="info">
-      <p>
-        I'm a Full Stack developer based in Chennai, Taminadu, India. I have
-        worked on many types of Full-Stack from fintech applications to
-        Ecommerce booking platforms.
-      </p>
-    </div>
-    <div class="btn">
-      <button mat-raised-button (click)='redirectToProject()' color="primary">Projects</button>
-    </div>
-  </div>
-  <div class="email">
-
   </div>
 </div>

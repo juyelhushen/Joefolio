@@ -1,6 +1,6 @@
-<div class="container">
+<div class="sidebarContainer">
   <app-topbar (sidenavToggle)="toggleSidenav()" Responsive></app-topbar>
-  <mat-drawer-container class="example-container" hasBackdrop="true">
+  <mat-drawer-container class="drawerContainer" hasBackdrop="true">
     <mat-drawer class="circularDrawer" #drawer mode="over" position="end">
       <div class="drawerInfo">
         <ul (click)="toggleSidenav()">

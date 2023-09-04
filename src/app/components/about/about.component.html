@@ -1,63 +1,162 @@
 <div class="container">
-  <h2 class="heading heading-sec heading-sec__mb-med">
-    <span class="heading-sec__main">About Me</span>
-    <span class="heading-sec__sub">
-      Here you will find more information about me, what I do, and my current
-      skills mostly in terms of programming and technology.
-    </span>
-  </h2>
-  <div class="about__content">
-    <div class="about__content-main">
-      <h3 class="about__content-title">Get to know me!</h3>
-      <div class="about__content-details">
-        <p class="about__content-details-para">
-          I'm a <strong>Full-Stack Web Developer</strong> building the Front-end
-          of Websites and Full stack Web Applications that leads to the success of the
-          overall product. Check out some of my work in the
-          <strong>Projects</strong> section.
-        </p>
-        <p class="about__content-details-para">
-          I also like sharing content related to the stuff that I have learned
-          over the years in <strong>Web Development</strong> so it can help
-          other people of the Dev Community. Feel free to Connect or Follow me
-          on my
-          <a
-            rel="noreferrer"
-            href="https://linkedin.com/in/juyel-hushen-770674170"
-            target="_blank"
-            >Linkedin</a
-          >
-          where I post useful content related to Web Development and Programming
-        </p>
-        <p class="about__content-details-para">
-          I'm open to <strong>Job</strong> opportunities where I can contribute,
-          learn and grow. If you have a good opportunity that matches my skills
-          and experience then don't hesitate to <strong>contact</strong> me.
-        </p>
+  <div class="aboutContainer">
+    <h2>
+      <span class="headingMain">About Me</span>
+      <span class="headingSub">
+        Here you will find more information about me, what I do, and my current
+        skills mostly in terms of programming and technology.
+      </span>
+    </h2>
+    <div class="aboutContent">
+      <div class="aboutContentMain">
+        <h3 class="aboutContentTitle">Get to know me!</h3>
+        <div class="aboutContentDetails">
+          <p class="aboutContentDetailsPara">
+            I'm a passionate and dedicated Java
+            <strong>Full-Stack Web Developer</strong> with a proven track record
+            of creating <strong>robust</strong> and
+            <strong>scalable</strong> web applications. My expertise spans both
+            front-end and back-end technologies, including Java, Spring Boot and
+            Angular. With a keen eye for design and a commitment to clean,
+            efficient code, I strive to deliver exceptional user experiences. I
+            excel in problem-solving and collaborating with cross-functional
+            teams to deliver innovative solutions. I'm excited to leverage
+            my skills to tackle new challenges and drive innovation in the world
+            of Full Stack development.
+          </p>
+          <p class="aboutContentDetailsPara">
+            I also like sharing content related to the stuff that I have learned
+            over the years in <strong>Web Development</strong> so it can help
+            other people of the Dev Community. Feel free to Connect or Follow me
+            on my
+            <a
+              rel="noreferrer"
+              href="https://linkedin.com/in/juyel-hushen-770674170"
+              target="_blank"
+              >Linkedin</a
+            >
+            where I post useful content related to Web Development and
+            Programming.
+          </p>
+          <p class="aboutContentDetailsPara">
+            I'm open to <strong>Job</strong> opportunities where I can
+            contribute, learn and grow. If you have a good opportunity that
+            matches my skills and experience then don't hesitate to
+            <strong>contact</strong> me.
+          </p>
+        </div>
+        <div class="btn">
+          <button mat-raised-button (click)="redirectToContct()">
+            Contact
+          </button>
+        </div>
       </div>
-      <div class="btn">
-        <button mat-raised-button (click)='redirectToContct()'>Contact</button>
+      <div class="aboutContentSkills">
+        <h3 class="aboutContentTitle">My Skills</h3>
+        <div class="skills">
+          <div class="skillsIcon">
+            <img
+              class="imgResponsive"
+              src="../../../assets/skills/html.png"
+              id="html"
+            />
+          </div>
+          <div class="skillsIcon">
+            <img
+              class="imgResponsive"
+              src="../../../assets/skills/css.png"
+              id="css"
+            />
+          </div>
+          <div class="skillsIcon">
+            <img
+              class="imgResponsive"
+              src="../../../assets/skills/js.png"
+              id="js"
+            />
+          </div>
+          <div class="skillsIcon">
+            <img class="imgResponsive" src="../../../assets/skills/Java.jpg" />
+          </div>
+          <div class="skillsIcon">
+            <img
+              class="imgResponsive"
+              src="../../../assets/skills/bootstrap.png"
+              id="bootstrap"
+            />
+          </div>
+          <div class="skillsIcon">
+            <img
+              class="imgResponsive"
+              src="../../../assets/skills/spring-boot.png"
+              id="spring boot"
+            />
+          </div>
+          <div class="skillsIcon">
+            <img
+              class="imgResponsive"
+              src="../../../assets/skills/angular.png"
+              id="angular"
+            />
+          </div>
+          <div class="skillsIcon">
+            <img
+              class="imgResponsive"
+              src="../../../assets/skills/github.png"
+              id="github"
+            />
+          </div>
+          <div class="skillsIcon">
+            <img
+              class="imgResponsive"
+              src="../../../assets/skills/TypeScript.png"
+              id="TypeScript"
+            />
+          </div>
+          <div class="skillsIcon">
+            <img
+              class="imgResponsive"
+              src="../../../assets/skills/sql.png"
+              id="SQL"
+            />
+          </div>
+          <div class="skillsIcon">
+            <img
+              class="imgResponsive"
+              src="../../../assets/skills/Postgresql.png"
+              id="postgres"
+            />
+          </div>
+          <div class="skillsIcon">
+            <img
+              class="imgResponsive"
+              src="../../../assets/skills/grafana.png"
+              id="grafana"
+            />
+          </div>
+          <div class="skillsIcon">
+            <img
+              class="imgResponsive"
+              src="../../../assets/skills/redis.png"
+              id="redis"
+            />
+          </div>
+          <div class="skillsIcon">
+            <img
+              class="imgResponsive"
+              src="../../../assets/skills/docker.png"
+              id="docker"
+            />
+          </div>
+          <div class="skillsIcon">
+            <img
+              class="imgResponsive"
+              src="../../../assets/skills/outsystem.png"
+              id="outsystem"
+            />
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="about__content-skills">
-      <h3 class="about__content-title">My Skills</h3>
-      <div class="skills">
-        <div class="skills_icon"><img class="img-responsive" src="../../../assets/skills/html.png" id="html"></div>
-        <div class="skills_icon"><img class="img-responsive" src="../../../assets/skills/css.png" id="css"></div>
-        <div class="skills_icon"><img class="img-responsive" src="../../../assets/skills/js.png" id="js"></div>
-        <div class="skills_icon"><img class="img-responsive" src="../../../assets/skills/java.png"></div>
-        <div class="skills_icon"><img class="img-responsive" src="../../../assets/skills/bootstrap.png" id="bootstrap"></div>
-        <div class="skills_icon"><img class="img-responsive" src="../../../assets/skills/spring-boot.png" id="spring boot"></div>
-        <div class="skills_icon"><img class="img-responsive" src="../../../assets/skills/angular.png" id="angular"></div>
-        <div class="skills_icon"><img class="img-responsive" src="../../../assets/skills/github.png" id="github"></div>
-        <div class="skills_icon"><img class="img-responsive" src="../../../assets/skills/TypeScript.png" id="TypeScript"></div>
-        <div class="skills_icon"><img class="img-responsive" src="../../../assets/skills/sql.png" id="SQL"></div>
-        <div class="skills_icon"><img class="img-responsive" src="../../../assets/skills/Postgresql.png" id="postgres"></div>
-        <div class="skills_icon"><img class="img-responsive" src="../../../assets/skills/grafana.png" id="grafana"></div>
-        <div class="skills_icon"><img class="img-responsive" src="../../../assets/skills/redis.png" id="redis"></div>
-        <div class="skills_icon"><img class="img-responsive" src="../../../assets/skills/docker.png" id="docker"></div>
-        <div class="skills_icon"><img class="img-responsive" src="../../../assets/skills/outsystem.png" id="outsystem"></div>
-    </div>
     </div>
   </div>
 </div>

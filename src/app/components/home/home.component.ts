@@ -33,7 +33,7 @@ export class HomeComponent {
   redirectToGithub = () => {
     window.open(environment.githubLink, '-blank');
   };
-  
+
   redirectToInsta = () => {
     window.open(environment.instaLink, '-blank');
   };
@@ -41,5 +41,9 @@ export class HomeComponent {
 
   redirectToProject = () => {
     window.location.href = '#projects';
+  };
+
+  redirectToAbout = () => {
+    window.location.href = '#about';
   };
 }

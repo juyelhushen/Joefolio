@@ -1,5 +1,5 @@
 :host {
-  .container {
+  .homeContainer {
     display: flex;
     color: black;
     background: linear-gradient(
@@ -15,7 +15,7 @@
     position: relative;
     clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 50% 100%, 0% 95%);
 
-    .social-icons {
+    .socialIcons {
       display: flex;
       flex-direction: column;
       position: relative;
@@ -113,7 +113,7 @@
       }
     }
 
-    .home {
+    .homeContent {
       display: grid;
       padding: 1rem 2rem;
       position: absolute;
@@ -179,17 +179,50 @@
         }
       }
     }
+
+    .scrollDown {
+      position: absolute;
+      bottom: 20px;
+      width: 40px;
+      height: 40px;
+      left: 50%;
+      // background: var(--black);
+      transform: translate(-50%, -80px) rotate(45deg);
+
+      span {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-bottom: 2px solid var(--black);
+        border-right: 2px solid var(--black);
+      }
+
+      span:nth-child(1) {
+        transform: translate(-15px, -15px);
+      }
+      span:nth-child(2) {
+        transform: translate(0, 0);
+      }
+      span:nth-child(3) {
+        transform: translate(15px, 15px);
+
+      }
+    }
   }
 }
 
 //pc
 :host.pc {
-  .container {
+  .homeContainer {
     clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%);
 
-    .home {
+    .homeContent {
+      top: 45%;
       grid-template-rows: 1fr 1fr 0.5fr;
-      padding: 1rem 5rem;
+      padding: 3rem 5rem;
 
       .name {
         font-size: 4.5rem;
@@ -208,5 +241,25 @@
         }
       }
     }
+  }
+}
+
+
+@keyframes animate {
+  0% {
+    top: -5px;
+    left:-5px;
+    opacity: 0;
+  }
+  25% {
+    top: 5px;
+    left:5px;
+    opacity: 1;
+  }
+
+  100% {
+    top: 5px;
+    left:5px;
+    opacity: 1;
   }
 }

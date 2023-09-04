@@ -1,5 +1,5 @@
 :host {
-    .container {
+    .projectContainer {
       display: flex;
       color: black;
       height: auto;
@@ -7,7 +7,7 @@
       position: relative;
       flex-direction: column;
       background-color: var(--white);
-  
+
       h2 {
         position: relative;
         top: 1rem;
@@ -16,8 +16,8 @@
         grid-template-rows: repeat(2, 1fr);
         place-items: center;
         row-gap: 2rem;
-  
-        .heading-sec__main {
+
+        .headingMain {
           display: block;
           font-size: 3rem;
           text-transform: uppercase;
@@ -26,8 +26,8 @@
           text-align: center;
           position: relative;
         }
-  
-        .heading-sec__main::after {
+
+        .headingMain::after {
           content: "";
           position: absolute;
           top: calc(100% + 1.8rem);
@@ -39,8 +39,8 @@
           transform: translateX(-50%);
           border-radius: 5px;
         }
-  
-        .heading-sec__sub {
+
+        .headingSub {
           white-space: normal;
           display: -webkit-box;
           -webkit-line-clamp: 4;
@@ -55,42 +55,42 @@
           line-height: 1.6;
         }
       }
-  
-      .projects__content {
+
+      .projectsContent {
         display: block;
         padding: 1rem 2rem;
-  
-        .projects__row {
+
+        .projectsRow {
           display: grid;
           grid-template-columns: 1fr;
           grid-gap: 2rem;
           margin-bottom: 4rem;
-  
-          .projects__row-img-cont {
+
+          .projectsRowImgCont {
             overflow: hidden;
-  
-            .projects__row-img {
+
+            .projectsRowImg {
               width: 100%;
               display: block;
               object-fit: cover;
             }
           }
-  
-          .projects__row-content {
+
+          .projectsRowContent {
             padding: 2rem 0;
             display: flex;
             justify-content: center;
             flex-direction: column;
             align-items: center;
-  
-            .projects__row-content-title {
+
+            .projectsRowContentTitle {
               letter-spacing: 2px;
               font-weight: 600;
               font-size: 1.5rem;
               margin-bottom: 1rem;
             }
-  
-            .projects__row-content-desc {
+
+            .projectsRowContentDesc {
               font-size: 1rem;
               color: #666;
               max-width: 60rem;
@@ -98,10 +98,10 @@
               margin-bottom: 3rem;
               text-align: center;
             }
-  
+
             .btn {
               text-align: left;
-  
+
               button {
                 width: 200px;
                 height: 50px;
@@ -121,53 +121,53 @@
       }
     }
   }
-  
+
   :host.pc {
-    .container {
+    .projectContainer {
       h2 {
         padding: 3rem 5rem;
         position: relative;
         top: 2rem;
-  
-        .heading-sec__main {
+
+        .headingMain {
           font-size: 3.5rem;
           font-weight: 600;
         }
-  
-        .heading-sec__main::after {
+
+        .headingMain::after {
           top: calc(100% + 1.5rem);
           height: 7px;
           width: 4rem;
         }
-  
-        .heading-sec__sub {
+
+        .headingSub {
           -webkit-line-clamp: 2;
           font-weight: 500;
           font-size: 1.2rem;
           max-width: 50rem;
         }
       }
-  
-      .projects__content {
+
+      .projectsContent {
         display: block;
         padding: 3rem 5rem;
-  
-        .projects__row {
+
+        .projectsRow {
           display: grid;
           grid-template-columns: 1.5fr 1fr;
           grid-gap: 4rem;
           // place-items: left;
-  
-          .projects__row-content {
+
+          .projectsRowContent {
             place-items: start;
-  
-            .projects__row-content-title {
+
+            .projectsRowContentTitle {
               font-weight: 700;
               font-size: 2rem;
               margin-bottom: 1rem;
             }
-  
-            .projects__row-content-desc {
+
+            .projectsRowContentDesc {
               text-align: left;
             }
           }
@@ -175,4 +175,3 @@
       }
     }
   }
-  

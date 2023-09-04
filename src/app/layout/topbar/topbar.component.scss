@@ -83,7 +83,7 @@
             }
 
             a:hover::before {
-              transform: scaleY(.7);
+              transform: scaleY(0.7);
             }
 
             a:hover {
@@ -94,29 +94,12 @@
       }
     }
   }
+}
 
-  :host.pc {
-    .container {
-      mat-toolbar {
-        height: 5rem;
-      }
+:host.pc {
+  .container {
+    mat-toolbar {
+      min-height: 5rem;
     }
   }
-
-  // .sidenav-container {
-  //   display: flex;
-  //   height: 100vh;
-  // }
-
-  // mat-drawer {
-  //   width: 250px; /* Set your desired width */
-  //   flex-shrink: 0;
-  //   position: absolute;
-  //   top: 0;
-  // }
-
-  // mat-drawer-content {
-  //   flex-grow: 1;
-  //   overflow: auto;
-  // }
 }
