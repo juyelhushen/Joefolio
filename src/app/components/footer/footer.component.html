@@ -1,57 +1,71 @@
-<footer>
-  <div class="container">
-    <div class="row">
-      <div>
-        <div class="social-icons">
-          <div class="button">
-            <div class="icon">
-              <a href=""><i class="bx bxl-facebook" (click)="redirectToFB()"></i></a>
+<div class="container">
+  <footer>
+    <div class="footerContainer">
+      <div class="row">
+        <div>
+          <div class="social-icons">
+            <div class="button">
+              <div class="icon">
+                <a href=""
+                  ><i class="bx bxl-facebook" (click)="redirectToFB()"></i
+                ></a>
+              </div>
+            </div>
+            <div class="button">
+              <div class="icon">
+                <a
+                  ><i class="bx bxl-linkedin" (click)="redirectToLinkdin()"></i
+                ></a>
+              </div>
+            </div>
+            <div class="button">
+              <div class="icon">
+                <a href=""
+                  ><i
+                    class="bx bxl-instagram-alt"
+                    (click)="redirectToInsta()"
+                  ></i
+                ></a>
+              </div>
+            </div>
+            <div class="button">
+              <div class="icon">
+                <a href=""
+                  ><i class="bx bxl-github" (click)="redirectToGithub()"></i
+                ></a>
+              </div>
+            </div>
+            <div class="button">
+              <div class="icon">
+                <a
+                  ><i class="bx bxl-youtube" (click)="redirectToYoutube()"></i
+                ></a>
+              </div>
             </div>
           </div>
-          <div class="button">
-            <div class="icon">
-              <a ><i class="bx bxl-linkedin" (click)='redirectToLinkdin()'></i></a>
-            </div>
+          <mat-divider class="divider"></mat-divider>
+          <div class="page-scroll">
+            <a
+              id="to-top"
+              class="page-scroll"
+              (click)="scrollToTopWithDelay(500)"
+            >
+              <img
+                id="rocket"
+                src="../../../assets/img/rocket.png"
+                matTooltip="Lift me up, rocketty"
+                [matTooltipPosition]="tooltipPosition"
+                [matTooltipShowDelay]="300"
+                [matTooltipHideDelay]="300"
+              />
+            </a>
           </div>
-          <div class="button">
-            <div class="icon">
-              <a href=""><i class="bx bxl-instagram-alt" (click)="redirectToInsta()"></i></a>
-            </div>
+          <mat-divider></mat-divider>
+          <div class="copyright">
+            <p>&COPY; Juyel Hushen 2023.</p>
           </div>
-          <div class="button">
-            <div class="icon">
-              <a href=""><i class="bx bxl-github" (click)="redirectToGithub()"></i></a>
-            </div>
-          </div>
-          <div class="button">
-            <div class="icon">
-              <a ><i class="bx bxl-youtube" (click)="redirectToYoutube()"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <mat-divider class="divider"></mat-divider>
-        <div class="page-scroll">
-          <a
-            id="to-top"
-            class="page-scroll"
-            (click)="scrollToTopWithDelay(500)"
-          >
-            <img
-              id="rocket"
-              src="../../../assets/img/rocket.png"
-              matTooltip="Lift me up, rocketty"
-              [matTooltipPosition]="tooltipPosition"
-              [matTooltipShowDelay]="300"
-              [matTooltipHideDelay]="300"
-            />
-          </a>
-        </div>
-        <mat-divider></mat-divider>
-        <div class="copyright">
-          <p>&COPY; Juyel Hushen 2023.</p>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
+</div>

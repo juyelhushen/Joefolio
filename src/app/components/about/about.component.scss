@@ -6,7 +6,7 @@
     min-height: 50rem;
     position: relative;
     flex-direction: column;
-    background-color: var(--white-gray);
+    background-color: var(--lightest-slate);
 
     h2 {
       position: relative;
@@ -21,7 +21,6 @@
         display: block;
         font-size: 3rem;
         text-transform: uppercase;
-        letter-spacing: 1px;
         letter-spacing: 3px;
         text-align: center;
         position: relative;
@@ -31,10 +30,9 @@
         content: "";
         position: absolute;
         top: calc(100% + 1.8rem);
-        // top: calc(100% + 1.5rem);
         height: 5px;
         width: 3rem;
-        background: #7843e9;
+        background: var(--navy);
         left: 50%;
         transform: translateX(-50%);
         border-radius: 5px;
@@ -47,7 +45,7 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-align: center;
-        color: #555;
+        color: var(--slate);
         font-size: 1rem;
         font-weight: 300;
         max-width: 60rem;
@@ -63,7 +61,7 @@
       top: 2rem;
       grid-template-columns: 1fr;
       grid-gap: 4rem;
-      background-color: var(--white-gray);
+      background-color: var(--lightest-slate);
 
       .aboutContentMain {
         display: block;
@@ -87,19 +85,26 @@
 
         .btn {
           text-align: left;
+          margin-top: 30px;
+          margin-bottom: 30px;
 
           button {
             width: 200px;
-            height: 50px;
-            background: #7843e9;
-            color: #fff;
+            height: 60px;
+            background-color: var(--navy);
+            color: var(--white);
             text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-block;
             font-weight: 700;
-            letter-spacing: 2px;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+            letter-spacing: 3px;
+            border: 2px solid var(--navy);
+            transition: var(--transition);
+          }
+
+          button:hover {
+            box-shadow: 4px 4px var(--navy), 8px 8px var(--navy);
+            background-color: transparent;
+            color: var(--navy);
+            font-size: 1.2rem;
           }
         }
       }

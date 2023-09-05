@@ -6,17 +6,17 @@
 mat-drawer-content {
   display: flex;
   flex-direction: column;
-  background-color: var(--dark-gray);
+  background-color: var(--navy);
 }
 
 .circularDrawer {
   position: fixed;
   width: 100%;
   clip-path: circle(400px at right 30px);
+  background-color: var(--navy);
 
   .drawerInfo {
     display: flex;
-    background-color: var(--gray-light);
     height: 100%;
     align-items: center;
     justify-content: center;
@@ -33,12 +33,12 @@ mat-drawer-content {
 
         a {
           font-size: 20px;
-          letter-spacing: 1px;
+          letter-spacing: 2px;
           font-weight: 500;
           text-decoration: none;
           padding: 0.2em 1.2em 0.9em 1.2em;
           border-radius: 10px 10px 0 0;
-          color: rgb(39, 39, 39);
+          color: var(--green);
           transition: all 0.3s ease;
           position: relative;
           z-index: 1;
@@ -47,17 +47,16 @@ mat-drawer-content {
         a::before {
           content: "";
           position: absolute;
-          bottom: 0;
           left: 0;
+          bottom: 0;
           width: 100%;
           height: 41px;
           border-radius: 10px 10px 0 0;
-          background: #853333;
           transform-origin: bottom;
-          background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+          background-color: var(--green);
           transform: scaleY(0.05);
           z-index: -1;
-          transition: all 0.4s;
+          transition: var(--transition);
         }
 
         a:hover::before {
@@ -65,7 +64,7 @@ mat-drawer-content {
         }
 
         a:hover {
-          color: var(--white);
+          color: var(--black);
         }
       }
     }

@@ -108,10 +108,7 @@
           <mat-grid-tile colspan="4">
             <div class="btn">
               <button
-                type="submit"
-                mat-raised-button
-                color="primary"
-                class="btn"
+                type="submit" [disabled]="!(contactForm.valid && contactForm.dirty)"
               >
                 Send
               </button>

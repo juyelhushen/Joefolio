@@ -1,6 +1,7 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { TopbarComponent } from '../topbar/topbar.component';
 
 @Component({
   selector: 'app-sidenavbar',
@@ -9,11 +10,11 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class SidenavbarComponent {
 
-  @ViewChild('drawer') drawer!: MatSidenav;
+  @ViewChild(TopbarComponent) topbar!: TopbarComponent;
 
   public isMobile = false;
 
-  constructor(private observer: BreakpointObserver) {}
+  constructor(private observer: BreakpointObserver ) {}
 
   ngAfterViewInit() {
     this.observer.observe(['(min-width: 800px)']).subscribe((res) => {
@@ -21,9 +22,7 @@ export class SidenavbarComponent {
     });
   }
 
-
-  toggleSidenav() {
-    this.drawer.toggle();
+  toggle = () => {
+    this.topbar.toggleSidenav();
   }
-
 }

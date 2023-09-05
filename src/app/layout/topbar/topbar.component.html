@@ -1,25 +1,34 @@
 <div class="container">
-  <mat-toolbar>
-    <div class="header-logo">
-      <a href="#"
-        ><img class="logo" src="../../../assets/img/icon.png" alt="header-icon"
-      /></a>
-      <p class="nav-title">Juyel Hushen</p>
-    </div>
+  <div class="headerContainer">
+    <mat-toolbar class="header">
+      <div class="headerLogo">
+        <a href="#"
+          ><img
+            class="logo"
+            src="../../../assets/img/profile.jpg"
+            alt="header-icon"
+        /></a>
+        <p class="navTitle">Juyel Hushen</p>
+      </div>
 
-    <span class="spacer"></span>
-    <div class="navItems" *ngIf="!isMobile">
-      <ul>
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#projects">PROJECTS</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
-    </div>
+      <span class="spacer"></span>
+      <div class="navItems" *ngIf="!isMobile">
+        <ul>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
 
-    <div class="sidenav-toggle" (click)="toggleSidenav()" *ngIf="isMobile" >
-      <button mat-icon-button color="primary" >
-        <mat-icon>menu</mat-icon>
-      </button>
-    </div>
-  </mat-toolbar>
+      <div id="menu"   (click)="toggleSidenav()" *ngIf="isMobile">
+        <!-- <button mat-icon-button color="primary">
+          <mat-icon>menu</mat-icon>
+        </button> -->
+        <span ></span>
+        <span ></span>
+        <span ></span>
+      </div>
+    </mat-toolbar>
+  </div>
+</div>
