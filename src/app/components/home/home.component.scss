@@ -1,7 +1,7 @@
 :host {
   .homeContainer {
     display: flex;
-    color: black;
+    color: var(--black);
     background: linear-gradient(
         to right,
         rgba(197, 225, 235, 0.8),
@@ -27,12 +27,11 @@
         height: 60px;
         float: left;
         margin: 5px 0;
-        background-color: #f06;
         border-radius: 50px;
         cursor: pointer;
         overflow: hidden;
         box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-        background: #fff;
+        background-color: var(--white);
         transition: var(--transition);
 
         .icon {
@@ -59,57 +58,51 @@
           margin-left: 10px;
           transition: var(--transition);
         }
-      }
 
-      .button:hover {
-        width: 13em;
-        overflow: hidden;
+        &:hover {
+          width: 13em;
+          overflow: hidden;
 
-        .icon i {
-          color: var(--white);
+          .icon i {
+            color: var(--white);
+          }
+        }
+
+        &:nth-child(1):hover .icon {
+          background-color: var(--fb);
+        }
+        &:nth-child(2):hover .icon {
+          background-color: var(--lin);
+        }
+        &:nth-child(3):hover .icon {
+          background: var(--instaBg);
+        }
+        &:nth-child(4):hover .icon {
+          background-color: var(--github);
+        }
+        &:nth-child(5):hover .icon {
+          background-color: var(--youtube);
+        }
+
+        // span text
+
+        &:nth-child(1):hover span {
+          color: var(--fb);
+        }
+        &:nth-child(2):hover span {
+          color: var(--lin);
+        }
+        &:nth-child(3):hover span {
+          color: var(insta);
+        }
+        &:nth-child(4):hover span {
+          color: var(--github);
+        }
+        &:nth-child(5):hover span {
+          color: var(--youtube);
         }
       }
 
-      .button:nth-child(1):hover .icon {
-        background: #4267b2;
-      }
-      .button:nth-child(2):hover .icon {
-        background: #205f7f;
-      }
-      .button:nth-child(3):hover .icon {
-        background: radial-gradient(
-          circle at 30% 107%,
-          #fdf497 0%,
-          #fdf497 5%,
-          #fd5949 45%,
-          #d6249f 60%,
-          #285aeb 90%
-        );
-      }
-      .button:nth-child(4):hover .icon {
-        background: #333;
-      }
-      .button:nth-child(5):hover .icon {
-        background: #ff0000;
-      }
-
-      // span text
-
-      .button:nth-child(1):hover span {
-        color: #4267b2;
-      }
-      .button:nth-child(2):hover span {
-        color: #205f7f;
-      }
-      .button:nth-child(3):hover span {
-        color: #e1306c;
-      }
-      .button:nth-child(4):hover span {
-        color: #333;
-      }
-      .button:nth-child(5):hover span {
-        color: #ff0000;
-      }
     }
 
     .homeContent {
@@ -185,22 +178,22 @@
           span {
             background-color: var(--navy);
             height: 100%;
-            width:0;
+            width: 0;
             position: absolute;
             left: 0;
             bottom: 0;
             z-index: -1;
             transition: var(--transition);
           }
-        }
 
-        button:hover {
-          color: var(--green);
-          font-size: 1rem;
-          box-shadow: 0 5px 15px 0 rgb(28 2 2 / 88%);
+          &:hover {
+            color: var(--green);
+            font-size: 1rem;
+            box-shadow: 0 5px 15px 0 rgb(28 2 2 / 88%);
 
-          span {
-            width: 100%;
+            span {
+              width: 100%;
+            }
           }
         }
       }
@@ -223,23 +216,25 @@
         height: 100%;
         border-bottom: 2px solid var(--black);
         border-right: 2px solid var(--black);
-      }
 
-      span:nth-child(1) {
-        transform: translate(-15px, -15px);
-      }
-      span:nth-child(2) {
-        transform: translate(0, 0);
-      }
-      span:nth-child(3) {
-        transform: translate(15px, 15px);
+        &:nth-child(1) {
+          transform: translate(-15px, -15px);
+        }
 
+        &:nth-child(2) {
+          transform: translate(0, 0);
+        }
+
+        &:nth-child(3) {
+          transform: translate(15px, 15px);
+        }
       }
     }
   }
 }
 
 //pc
+
 :host.pc {
   .homeContainer {
     clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%);
@@ -269,22 +264,21 @@
   }
 }
 
-
 @keyframes animate {
   0% {
     top: -5px;
-    left:-5px;
+    left: -5px;
     opacity: 0;
   }
   25% {
     top: 5px;
-    left:5px;
+    left: 5px;
     opacity: 1;
   }
 
   100% {
     top: 5px;
-    left:5px;
+    left: 5px;
     opacity: 1;
   }
 }

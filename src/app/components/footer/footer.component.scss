@@ -2,7 +2,7 @@
     display: block;
 
     footer {
-      color: #fff;
+      color: var(--white);
       background-color: var(--navy);
       padding: 50px 50px;
 
@@ -30,7 +30,7 @@
               cursor: pointer;
               overflow: hidden;
               box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-              background: #fff;
+              background-color: var(--white);
               transition: var(--transition);
 
               .icon {
@@ -55,20 +55,21 @@
               }
             }
 
+
             .button:hover {
               transform: translateY(-5px);
             }
           }
 
           .button:nth-child(1) .icon {
-            background: #4267b2;
+            background-color: var(--fb);
           }
 
           .button:nth-child(1):hover .icon {
             background: var(--white);
 
             a {
-              color: #4267b2;
+              color: var(--fb);
 
               i {
                 font-size: 35px;
@@ -77,14 +78,14 @@
           }
 
           .button:nth-child(2) .icon {
-            background: #205f7f;
+            background-color: var(--lin);
           }
 
           .button:nth-child(2):hover .icon {
             background: var(--white);
 
             a {
-              color: #205f7f;
+              color: var(--lin);
 
               i {
                 font-size: 35px;
@@ -93,21 +94,14 @@
           }
 
           .button:nth-child(3) .icon {
-            background: radial-gradient(
-              circle at 30% 107%,
-              #fdf497 0%,
-              #fdf497 5%,
-              #fd5949 45%,
-              #d6249f 60%,
-              #285aeb 90%
-            );
+            background: var(--instaBg);
           }
 
           .button:nth-child(3):hover .icon {
             background: var(--white);
 
             a {
-              color: #e1306c;
+              color: var(--insta);
 
               i {
                 font-size: 35px;
@@ -116,14 +110,14 @@
           }
 
           .button:nth-child(4) .icon {
-            background: #333;
+            background-color: var(--github);
           }
 
           .button:nth-child(4):hover .icon {
             background: var(--white);
 
             a {
-              color: #333;
+              color: var(--github);
 
               i {
                 font-size: 35px;
@@ -132,14 +126,14 @@
           }
 
           .button:nth-child(5) .icon {
-            background: #ff0000;
+            background-color: var(--youtube);
           }
 
           .button:nth-child(5):hover .icon {
             background: var(--white);
 
             a {
-              color: #ff0000;
+              color: var(--youtube);
 
               i {
                 font-size: 35px;
@@ -162,7 +156,6 @@
               img {
                 width: 60px;
                 padding: 5px;
-                // margin: 20px auto 0px;
                 animation: fadeInOut 3s infinite;
               }
             }
@@ -172,7 +165,7 @@
             display: block;
             margin-top: 10px;
             font-weight: 300;
-            color: #aaa;
+            color: var(--gray-white);
             text-align: center;
 
             p {
@@ -183,7 +176,6 @@
 
           .divider {
             margin-top: 20px;
-            // margin-bottom: 16px;
             background-color: rgba(255, 255, 255, 0.5);
           }
 

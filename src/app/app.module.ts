@@ -15,6 +15,7 @@ import { MaterialModule } from './shared/material-module';
 import { TopbarComponent } from './layout/topbar/topbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import { ResumeComponent } from './components/resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ConfirmationComponent } from './components/confirmation/confirmation.co
     ContactComponent,
     FooterComponent,
     ResponsiveDirective,
-    ConfirmationComponent
+    ConfirmationComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,

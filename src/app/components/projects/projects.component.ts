@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-projects',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class ProjectsComponent {
 
+  finmart = () => {
+  window.open(environment.finmart,'_blank')
+  }
+
+  corban = () => {
+  window.open(environment.corban,'_blank')
+  }
+
+  biriyumee = () => {
+  window.open(environment.biriyumee,'_blank')
+  }
 }

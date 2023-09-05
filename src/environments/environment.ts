@@ -6,4 +6,10 @@ export const environment = {
   githubLink: 'https://github.com/juyelhushen',
   production: false,
   emailJSKey: '_wNNTpyuKCY1QjQGI',
+
+  // project
+
+  finmart:'https://finmart.ae/',
+  corban:'http://13.232.170.246:4500/',
+  biriyumee:'https://personal-hekanzay.outsystemscloud.com/BiriyaniExchange_ui/login'
 };

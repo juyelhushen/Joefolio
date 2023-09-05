@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="resumeContainer">
+    <a
+      href="../../../assets/resume/resume.pdf"
+      target="_blank"
+      (mouseover)="toggleHover()"
+      (mouseout)="toggleHover()"
+    >
+      <span class="text" [style.display]="isHovered ? 'none' : 'inline-block'">View my full résumé.</span>
+      <img class="icon" src="../../../assets/img/download.png" alt="download resume" [style.display]="isHovered ? 'inline-block' : 'none'" />
+    </a>
+  </div>
+</div>

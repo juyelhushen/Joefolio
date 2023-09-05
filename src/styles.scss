@@ -6,11 +6,11 @@
   --dark-gray: #263238;
   --black: #212121;
   --white: #fff;
-  --white-gray: #fafafa;
+  --white-gray: #f2f2f2;
   --dark-blue: hsl(245, 58%, 8%);
   --nav-green: hsl(144, 50%, 55%);
   --navy: #0a192f;
-  --green: #64ffda;
+  --green: #00909c;
   --dark-navy: #020c1b;
   --light-navy: #112240;
   --lightest-navy: #233554;
@@ -23,8 +23,22 @@
   --green-tint: rgba(100,255,218,0.1);
   --pink: #f57dff;
   --blue: #57cbff;
-  // --fb:
   --transition: all 0.3s ease-in-out;
+  // --social--
+
+  --fb:#4267b2;
+  --lin:#205f7f;
+  --insta:#e1306c;
+  --instaBg: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  --github:#333;
+  --youtube:#ff0000;
 }
 
 * {
