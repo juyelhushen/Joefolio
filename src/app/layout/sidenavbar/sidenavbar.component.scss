@@ -23,16 +23,20 @@ mat-drawer-content {
 
     ul {
       display: flex;
-      list-style: none;
       flex-direction: column;
       margin-top: -14rem;
       margin-left: 7rem;
-
+      color: var(--green);
+      font-size: 20px;
+      
       li {
         margin: 1em;
+        list-style: none;
 
         a {
-          font-size: 20px;
+          font-family: var(--font-mono);
+          text-transform: uppercase;
+          font-size: 30px;
           letter-spacing: 2px;
           font-weight: 500;
           text-decoration: none;
@@ -42,28 +46,10 @@ mat-drawer-content {
           transition: all 0.3s ease;
           position: relative;
           z-index: 1;
-
-          &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 41px;
-            border-radius: 10px 10px 0 0;
-            transform-origin: bottom;
-            background-color: var(--green);
-            transform: scaleY(0.05);
-            z-index: -1;
-            transition: var(--transition);
-          }
-  
-          &:hover::before {
-            transform: scaleY(1.1);
-          }
   
           &:hover {
             color: var(--white-gray);
+            text-decoration: line-through;
           }
         }
 

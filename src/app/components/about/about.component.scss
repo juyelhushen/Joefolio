@@ -1,7 +1,7 @@
 :host {
   .aboutContainer {
     display: flex;
-    color: black;
+    color: var(--navy);
     height: auto;
     min-height: 50rem;
     position: relative;
@@ -49,6 +49,7 @@
         font-size: 1rem;
         font-weight: 300;
         max-width: 60rem;
+        font-family: var(--font-mono);
         margin: auto;
         line-height: 1.6;
       }
@@ -69,14 +70,13 @@
         .aboutContentTitle {
           font-weight: 600;
           font-size: 1.5rem;
-          // font-size: 2.8rem;
           margin-bottom: 3rem;
         }
 
         .aboutContentDetails {
           .aboutContentDetailsPara {
             font-size: 1rem;
-            color: #666;
+            color: var(--gray);
             max-width: 60rem;
             line-height: 1.5;
             margin-bottom: 1rem;
@@ -101,7 +101,7 @@
           }
 
           button:hover {
-            box-shadow: 4px 4px var(--navy), 8px 8px var(--navy);
+            box-shadow: var(--btnShadow);
             background-color: transparent;
             color: var(--navy);
             font-size: 1.2rem;
@@ -137,14 +137,15 @@
               width: 50px;
               height: auto;
               -webkit-filter: grayscale(100%);
-              filter: grayscale(100%);
-              -webkit-transition: all 0.3s ease-in-out;
-              -moz-transition: all 0.3s ease-in-out;
-              transition: all 0.3s ease-in-out;
-            }
+              filter: grayscale(100%) contrast(1);
+              -webkit-transition: var(--transition);
+              -moz-transition: var(--transition);
+              transition: var(--transition);
 
-            img:hover {
-              -webkit-filter: grayscale(0);
+              &:hover {
+                -webkit-filter: grayscale(0);
+                filter: grayscale(0);
+              }
             }
 
             .imgResponsive {

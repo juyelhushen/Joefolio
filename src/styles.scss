@@ -3,6 +3,7 @@
 :root {
   --white-gay: hsl(144, 20%, 92%);
   --gray-light: #bdbdbd;
+  --gray:#666;
   --dark-gray: #263238;
   --black: #212121;
   --white: #fff;
@@ -14,22 +15,28 @@
   --dark-navy: #020c1b;
   --light-navy: #112240;
   --lightest-navy: #233554;
-  --navy-shadow: rgba(2,12,27,0.7);
+  --navy-shadow: rgba(2, 12, 27, 0.7);
   --dark-slate: #495670;
   --slate: #8892b0;
   --light-slate: #a8b2d1;
   --lightest-slate: #ccd6f6;
   --green-white: #e6f1ff;
-  --green-tint: rgba(100,255,218,0.1);
+  --green-tint: rgba(100, 255, 218, 0.1);
   --pink: #f57dff;
   --blue: #57cbff;
+
+  --btnShadow: 4px 4px var(--navy), 8px 8px var(--navy);
+
+  --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+    system-ui, sans-serif;
+  --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   --transition: all 0.3s ease-in-out;
 
   // --social--
 
-  --fb:#4267b2;
-  --lin:#205f7f;
-  --insta:#e1306c;
+  --fb: #4267b2;
+  --lin: #205f7f;
+  --insta: #e1306c;
   --instaBg: radial-gradient(
     circle at 30% 107%,
     #fdf497 0%,
@@ -38,8 +45,8 @@
     #d6249f 60%,
     #285aeb 90%
   );
-  --github:#333;
-  --youtube:#ff0000;
+  --github: #333;
+  --youtube: #ff0000;
 }
 
 * {
@@ -63,7 +70,7 @@ body {
 .container {
   margin: 0 auto;
   max-width: 1500px;
-  outline: 0px solid white;
+  outline: 0px solid var(--white);
   overflow: hidden;
 }
 
@@ -103,15 +110,12 @@ h3 {
   padding: 20px !important;
 }
 
-.mdc-text-field--filled {
-  background-color: var(--white);
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: var(--green-white);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-
 ////For all large button
-
-

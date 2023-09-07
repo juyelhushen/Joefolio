@@ -46,7 +46,6 @@
                   color: var(--white);
 
                   i {
-                    // color: var(--white);
                     font-size: 25px;
                     line-height: 40px;
                     transition: var(--transition);
@@ -165,12 +164,13 @@
             display: block;
             margin-top: 10px;
             font-weight: 300;
-            color: var(--gray-white);
+            color: var(--slate);
             text-align: center;
 
             p {
-              font-family: "Lato", sans-serif;
+              font-family: var(--font-mono);
               font-size: 14px;
+              text-transform: uppercase;
             }
           }
 

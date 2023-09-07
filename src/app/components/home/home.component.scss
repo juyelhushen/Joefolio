@@ -17,7 +17,7 @@
     .socialIcons {
       display: flex;
       flex-direction: column;
-      position: relative;
+      position: absolute;
       left: 0;
       top: 25%;
       height: fit-content;
@@ -102,7 +102,6 @@
           color: var(--youtube);
         }
       }
-
     }
 
     .homeContent {
@@ -129,6 +128,7 @@
         letter-spacing: 2px;
         white-space: normal;
         line-height: 60px;
+        font-family: var(--font-sans);
       }
 
       .info {
@@ -141,6 +141,7 @@
         p {
           width: fit-content;
           font-size: 1rem;
+          font-family: var(--font-mono);
           line-height: 1.5;
           -webkit-line-clamp: 5;
           display: -webkit-box;
@@ -165,12 +166,11 @@
           font-weight: bold;
           border: 2px solid var(--navy);
           background-color: transparent;
-          color: var(--black);
+          color: var(--navy);
           height: 55px;
           text-transform: uppercase;
           cursor: pointer;
           font-weight: 700;
-          overflow: hidden;
           letter-spacing: 1px;
           box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
           transition: var(--transition);
@@ -239,6 +239,42 @@
   .homeContainer {
     clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%);
 
+    .email {
+      display: block;
+      position: absolute;
+      right: 20px;
+      bottom: 0;
+      width: 40px;
+
+      a {
+        margin: 20px auto;
+        padding: 10px;
+        font-family:var(--font-mono);
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: 1px;
+        text-decoration: none;
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        color: var(--navy);
+        transition: var(--transition);
+
+        &:hover {
+          color: var(--green);
+          transform: translateY(-5px);
+        }
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 2px;
+        height: 150px;
+        margin: 0px auto;
+        background-color: var(--navy);
+      }
+    }
+
     .homeContent {
       top: 45%;
       grid-template-rows: 1fr 1fr 0.5fr;
@@ -254,6 +290,9 @@
 
       .info {
         max-width: 50rem;
+        padding-top: 1rem;
+        font-family: var(--font-mono);
+
         p {
           font-size: 1.5rem;
           -webkit-line-clamp: 3;

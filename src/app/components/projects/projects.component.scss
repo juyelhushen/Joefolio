@@ -46,7 +46,8 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-align: center;
-        color: #555;
+        color: var(--slate);
+        font-family: var(--font-mono);
         font-size: 1rem;
         font-weight: 300;
         max-width: 60rem;
@@ -90,6 +91,7 @@
           }
 
           .projectsRowContentDesc {
+            font-family: var(--font-mono);
             font-size: 1rem;
             color: var(--dark-slate);
             max-width: 60rem;
@@ -114,7 +116,7 @@
             }
 
             button:hover {
-              box-shadow: 4px 4px var(--navy), 8px 8px  var(--navy);
+              box-shadow: var(--btnShadow);
               background-color: transparent;
               color: var(--navy);
               font-size: 1.2rem;
