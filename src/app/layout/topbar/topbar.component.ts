@@ -1,14 +1,15 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
 import {
   Component,
+  ElementRef,
   EventEmitter,
   HostListener,
   Output,
+  Renderer2,
   ViewChild,
 } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 
-declare var windows: Window;
 
 @Component({
   selector: 'app-topbar',
@@ -17,27 +18,28 @@ declare var windows: Window;
 })
 export class TopbarComponent {
 
+  isMenuOpen: boolean = false;
+
   isMobile: boolean = false;
 
-  @Output()sidenavToggle = new EventEmitter<void>();
+  @Output() sidenavToggle = new EventEmitter<void>();
 
-  @ViewChild(MatSidenav) sidenav!: MatSidenav;
-
-  constructor(private observer: BreakpointObserver) {}
+  constructor(
+    private observer: BreakpointObserver,
+    private renderer: Renderer2,
+    private el: ElementRef
+  ) {}
 
   ngAfterViewInit() {
     this.observer.observe(['(max-width: 800px)']).subscribe((res) => {
       this.isMobile = res.matches;
     });
-    this.isMobile = this.observer.isMatched('(max-width: 800px)');
-    if (!this.isMobile) {
-      this.sidenav.close();
-    }
   }
 
   toggleSidenav = () => {
-    let menu = document.getElementById('menu');
-    menu?.classList.toggle('openmenu');
+    let menu = this.el.nativeElement.querySelector('#humMenu');
+    this.renderer.addClass(menu,'openMenu');
+    this.isMenuOpen = !this.isMenuOpen;
     this.sidenavToggle.emit();
-  }
+  };
 }

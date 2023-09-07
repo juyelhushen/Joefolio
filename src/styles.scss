@@ -24,6 +24,7 @@
   --pink: #f57dff;
   --blue: #57cbff;
   --transition: all 0.3s ease-in-out;
+
   // --social--
 
   --fb:#4267b2;
@@ -68,7 +69,7 @@ body {
 
 p {
   display: block;
-  margin-block-start: 1em;
+  margin-block-start: 0em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
@@ -77,15 +78,11 @@ p {
 h3 {
   display: block;
   font-size: 1.17em;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
+  margin-block-start: 0;
+  margin-block-end: 0em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
-}
-
-.mdc-text-field--filled:not(.mdc-text-field--disabled) {
-  background-color: var(--gray-light);
 }
 
 .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
@@ -104,6 +101,10 @@ h3 {
   max-width: 100vw !important;
   margin-top: 70px !important;
   padding: 20px !important;
+}
+
+.mdc-text-field--filled {
+  background-color: var(--white);
 }
 
 html {

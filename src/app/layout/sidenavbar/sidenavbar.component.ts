@@ -6,17 +6,17 @@ import { TopbarComponent } from '../topbar/topbar.component';
 @Component({
   selector: 'app-sidenavbar',
   templateUrl: './sidenavbar.component.html',
-  styleUrls: ['./sidenavbar.component.scss']
+  styleUrls: ['./sidenavbar.component.scss'],
 })
 export class SidenavbarComponent {
-
+  
   @ViewChild(TopbarComponent) topbar!: TopbarComponent;
 
   public isMobile = false;
 
-  constructor(private observer: BreakpointObserver ) {}
+  constructor(private observer: BreakpointObserver) {}
 
-  ngAfterViewInit() {
+  ngOnInit(): void {
     this.observer.observe(['(min-width: 800px)']).subscribe((res) => {
       this.isMobile = res.matches;
     });
@@ -24,5 +24,5 @@ export class SidenavbarComponent {
 
   toggle = () => {
     this.topbar.toggleSidenav();
-  }
+  };
 }

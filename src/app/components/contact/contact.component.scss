@@ -56,7 +56,7 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-align: center;
-        color: #555;
+        color: var(--dark-gray);
         font-size: 1rem;
         font-weight: 300;
         max-width: 60rem;
@@ -94,15 +94,18 @@
               width: 100%;
               height: 100%;
 
+              input {
+              }
+
               mat-label {
-                color: var(--black);
+                color: var(--navy);
                 font-size: 1rem;
               }
             }
 
             .btn {
               text-align: center;
-              width: 100%;
+              width: 90%;
 
               button {
                 padding: 8px 14px;

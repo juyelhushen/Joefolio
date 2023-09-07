@@ -94,7 +94,7 @@
         }
       }
 
-      #menu {
+      #humMenu {
         display: flex;
         flex-direction: column;
         width: 50px;
@@ -109,7 +109,7 @@
           width: 40px;
           height: 3px;
           border-radius: 5px;
-          transition-duration: .10s;
+          transition-duration: 0.15s;
 
           &:nth-of-type(1) {
             transform: translate(0, -10px);
@@ -128,7 +128,7 @@
           }
         }
 
-        &.openmenu {
+        &.openMenu {
           span:nth-of-type(1) {
             transform: translate(0, 0) rotate(-45deg);
           }

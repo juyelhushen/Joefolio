@@ -21,10 +21,7 @@
         </ul>
       </div>
 
-      <div id="menu"   (click)="toggleSidenav()" *ngIf="isMobile">
-        <!-- <button mat-icon-button color="primary">
-          <mat-icon>menu</mat-icon>
-        </button> -->
+      <div id="humMenu"   (click)="toggleSidenav()" [class.openMenu]="isMenuOpen" *ngIf="isMobile">
         <span ></span>
         <span ></span>
         <span ></span>

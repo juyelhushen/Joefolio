@@ -76,8 +76,8 @@
         }
 
         .projectsRowContent {
-          padding: 2rem 0;
           display: flex;
+          padding: 1rem 0;
           justify-content: center;
           flex-direction: column;
           align-items: center;
@@ -86,15 +86,15 @@
             letter-spacing: 2px;
             font-weight: 600;
             font-size: 1.5rem;
-            margin-bottom: 1rem;
+            padding-bottom: 1rem;
           }
 
           .projectsRowContentDesc {
             font-size: 1rem;
             color: var(--dark-slate);
             max-width: 60rem;
-            line-height: 1.7;
-            margin-bottom: 3rem;
+            line-height: 1.5;
+            margin-bottom: 0.5rem;
             text-align: center;
           }
 
@@ -121,6 +121,26 @@
             }
           }
         }
+        .toolTitle {
+          font-weight: bold;
+          color: var(--navy);
+        }
+        .tools {
+          display: flex;
+          flex-wrap: wrap;
+          padding-bottom: 0.2rem;
+
+          .toolsName {
+            font-size: x-small;
+            text-align: center;
+            padding: 0.3rem 0.5rem;
+            margin-bottom: 1.2rem;
+            margin-right: 1rem;
+            background: var(--gray-light);
+            border-radius: 5px;
+            font-weight: 400;
+          }
+        }
       }
     }
   }
@@ -136,13 +156,14 @@
       .headingMain {
         font-size: 3.5rem;
         font-weight: 600;
+        
+        &::after {
+          top: calc(100% + 1.5rem);
+          height: 7px;
+          width: 4rem;
+        }
       }
 
-      .headingMain::after {
-        top: calc(100% + 1.5rem);
-        height: 7px;
-        width: 4rem;
-      }
 
       .headingSub {
         -webkit-line-clamp: 2;
@@ -168,7 +189,7 @@
           .projectsRowContentTitle {
             font-weight: 700;
             font-size: 2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
           }
 
           .projectsRowContentDesc {
