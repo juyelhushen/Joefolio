@@ -2,29 +2,37 @@
   <div class="headerContainer">
     <mat-toolbar class="header">
       <div class="headerLogo">
-        <a href="#"
-          ><img
-            class="logo"
-            src="../../../assets/img/profile.jpg"
-            alt="header-icon"
-        /></a>
+        <div class="home-img">
+          <div class="img-circle">
+            <span></span>
+            <span></span>
+            <div class="image">
+              <img src="../../../assets/img/profile.jpg" alt="" />
+            </div>
+          </div>
+        </div>
         <p class="navTitle">Juyel Hushen</p>
       </div>
 
       <span class="spacer"></span>
       <div class="navItems" *ngIf="!isMobile">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a style="--i: 1" href="#home">Home</a></li>
+          <li><a style="--i: 2" href="#about">About</a></li>
+          <li><a style="--i: 3" href="#projects">Projects</a></li>
+          <li><a style="--i: 4" href="#contact">Contact</a></li>
         </ul>
       </div>
 
-      <div id="humMenu"   (click)="toggleSidenav()" [class.openMenu]="isMenuOpen" *ngIf="isMobile">
-        <span ></span>
-        <span ></span>
-        <span ></span>
+      <div
+        id="humMenu"
+        (click)="toggleSidenav()"
+        [class.openMenu]="isMenuOpen"
+        *ngIf="isMobile"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </mat-toolbar>
   </div>
