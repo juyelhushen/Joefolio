@@ -1,13 +1,38 @@
 <div class="container">
   <div class="contactContainer">
     <h2 class="heading">
-      <span class="headingMain">Get In Touch</span>
-      <span class="headingSub">
+      <span
+        class="headingMain"
+        data-aos="fade-up"
+        data-aos-delay="100"
+        data-aos-duration="1000"
+        data-aos-easing="ease forwards"
+        data-aos-offset="100"
+        data-aos-once="true"
+        >Get In Touch</span
+      >
+      <span
+        class="headingSub"
+        data-aos="fade-up"
+        data-aos-delay="150"
+        data-aos-duration="1000"
+        data-aos-easing="ease forwards"
+        data-aos-offset="100"
+        data-aos-once="true"
+      >
         Have a sweet project in mind or just want to say hi? Feel free to send
         me a message by filling the form below and shoot the Send button!
       </span>
     </h2>
-    <div class="contactFormContainer">
+    <div
+      class="contactFormContainer"
+      data-aos="fade-up"
+      data-aos-delay="250"
+      data-aos-duration="1000"
+      data-aos-easing="ease forwards"
+      data-aos-offset="100"
+      data-aos-once="true"
+    >
       <form
         action="javacript:void(0)"
         class="contactForm"
@@ -108,7 +133,8 @@
           <mat-grid-tile colspan="4">
             <div class="btn">
               <button
-                type="submit" [disabled]="!(contactForm.valid && contactForm.dirty)"
+                type="submit"
+                [disabled]="!(contactForm.valid && contactForm.dirty)"
               >
                 Send
               </button>
