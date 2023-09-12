@@ -105,27 +105,27 @@
 
       .fbBtn {
         opacity: 0;
-        animation: slideBottom 1s ease forwards;
+        animation:  var(--slideBottom);
         animation-delay: 1.5s;
       }
       .linBtn {
         opacity: 0;
-        animation: slideLeft 1s ease forwards;
+        animation:  var(--slideTop);
         animation-delay: 1.5s;
       }
       .instaBtn {
         opacity: 0;
-        animation: zoomIn 1s ease forwards;
+        animation: var(--zoomIn);
         animation-delay: 1.5s;
       }
       .gitBtn {
         opacity: 0;
-        animation: slideRight 1s ease forwards;
+        animation:  var(--slideRight);
         animation-delay: 1.5s;
       }
       .youBtn {
         opacity: 0;
-        animation: slideTop 1s ease forwards;
+        animation:  var(--slideTop);
         animation-delay: 1.5s;
       }
     }
@@ -155,9 +155,6 @@
         white-space: normal;
         line-height: 60px;
         font-family: var(--font-sans);
-        opacity: 0;
-        animation: slideRight 1s ease forwards;
-        animation-delay: 0.7s;
       }
 
       .info {
@@ -179,9 +176,6 @@
           overflow: hidden;
           color: var(--dark-gray);
           text-align: center;
-          opacity: 0;
-          animation: slideLeft 1s ease forwards;
-          animation-delay: 0.7s;
         }
       }
 
@@ -189,7 +183,7 @@
         place-self: start;
         justify-self: center;
         opacity: 0;
-        animation: slideTop 1s ease forwards;
+        animation: var(--slideTop);
         animation-delay: 1.5s;
 
         button {
@@ -299,7 +293,7 @@
         color: var(--navy);
         transition: var(--transition);
         opacity: 0;
-        animation: slideRight 1s ease forwards;
+        animation: var(--slideRight);
         animation-delay: 1.5s;
 
         &:hover {
@@ -316,7 +310,7 @@
         margin: 0px auto;
         background-color: var(--navy);
         opacity: 0;
-        animation: slideLeft 1s ease forwards;
+        animation:  var(--slideLeft);
         animation-delay: 1.5s;
       }
     }

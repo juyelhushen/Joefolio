@@ -15,13 +15,19 @@
         font-size: 1.2em;
         font-weight: 700;
         text-transform: uppercase;
-        color: #f2f2f2;
+        color: var(--white);
         letter-spacing: 2px;
         overflow: hidden;
+        opacity: 0;
+        animation: slideTop .3s ease forwards;
+        animation-delay: 0.1s;
       }
 
       .icon {
         width: 60px;
+        opacity: 0;
+        animation: slideBottom .3s ease forwards;
+        animation-delay: 0.1s;
       }
     }
   }

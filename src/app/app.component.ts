@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -20,5 +21,9 @@ export class AppComponent {
         this.isConfirmationRoute =
           activatedRoute.firstChild?.snapshot.routeConfig?.path === 'confirm';
       });
+  }
+
+  ngOnInit() {
+    Aos.init();
   }
 }

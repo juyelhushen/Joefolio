@@ -24,7 +24,7 @@
           width: 70px;
           height: 70px;
           opacity: 0;
-          animation: slideRight .5s ease forwards;
+          animation:  var(--slideRight);
 
           .img-circle {
             position: relative;
@@ -88,7 +88,7 @@
           font-size: var(--font-mono);
           transition: var(--transition);
           opacity: 0;
-          animation: slideTop 1s ease forwards;
+          animation: var(--slideTop);
 
           &:hover {
             color: var(--white-gray);
@@ -106,7 +106,7 @@
         justify-content: center;
         cursor: pointer;
         opacity: 0;
-        animation: slideTop 1s ease forwards; ;
+        animation:  var(--slideTop);
 
         span {
           display: block;
@@ -187,7 +187,7 @@
               position: relative;
               transition: var(--transition);
               opacity: 0;
-              animation: slideTop 0.5s ease forwards;
+              animation:  var(--slideTop);
               animation-delay: calc(0.3s * var(--i));
             }
 

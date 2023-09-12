@@ -3,7 +3,7 @@
 :root {
   --white-gay: hsl(144, 20%, 92%);
   --gray-light: #bdbdbd;
-  --gray:#666;
+  --gray: #666;
   --dark-gray: #263238;
   --black: #212121;
   --white: #fff;
@@ -47,6 +47,13 @@
   );
   --github: #333;
   --youtube: #ff0000;
+
+  // animation variable
+  --slideTop: slideTop 1s ease forwards;
+  --slideBottom: slideBottom 1s ease forwards;
+  --slideRight: slideRight 1s ease forwards;
+  --slideLeft: slideLeft 1s ease forwards;
+  --zoomIn: zoomIn 1s ease forwards;
 }
 
 * {
@@ -118,7 +125,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 // animation
 
 @keyframes slideTop {
@@ -132,8 +138,6 @@ html {
     transform: translateY(0);
   }
 }
-
-
 
 @keyframes slideBottom {
   0% {
@@ -170,7 +174,6 @@ html {
     transform: translateX(0);
   }
 }
-
 
 @keyframes zoomIn {
   0% {
