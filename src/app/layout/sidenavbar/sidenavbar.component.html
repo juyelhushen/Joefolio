@@ -11,7 +11,7 @@
         </ul>
       </div>
     </mat-drawer>
-    <mat-drawer-content>
+    <mat-drawer-content matRipple [matRippleRadius]='radius' [matRippleColor]='color'>
       <div id="home">
         <app-home Responsive></app-home>
       </div>
@@ -30,7 +30,5 @@
       <app-footer Responsive></app-footer>
     </mat-drawer-content>
   </mat-drawer-container>
-  <div>
-
-  </div>
+  <div></div>
 </div>

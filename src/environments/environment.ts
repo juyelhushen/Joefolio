@@ -11,5 +11,6 @@ export const environment = {
 
   finmart:'https://finmart.ae/',
   corban:'http://13.232.170.246:4500/',
-  biriyumee:'https://personal-hekanzay.outsystemscloud.com/BiriyaniExchange_ui/login'
+  biriyumee:'https://personal-hekanzay.outsystemscloud.com/BiriyaniExchange_ui/login',
+  joefolio:'https://github.com/juyelhushen/Joefolio.git'
 };

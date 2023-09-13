@@ -1,7 +1,7 @@
 :host {
   .projectContainer {
     display: flex;
-    color: black;
+    color: var(--navy);
     height: auto;
     min-height: 50rem;
     position: relative;
@@ -56,92 +56,64 @@
       }
     }
 
-    .projectsContent {
-      display: block;
-      padding: 1rem 2rem;
+    app-project-items {
+      .projectsRowImg {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+      }
 
-      .projectsRow {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 2rem;
-        margin-bottom: 4rem;
+      .projectsRowContentTitle {
+        letter-spacing: 2px;
+        font-weight: 600;
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+      }
 
-        .projectsRowImgCont {
-          overflow: hidden;
+      .projectsRowContentDesc {
+        font-family: var(--font-mono);
+        font-size: 1rem;
+        color: var(--dark-slate);
+        max-width: 60rem;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+        text-align: center;
+      }
 
-          .projectsRowImg {
-            width: 100%;
-            display: block;
-            object-fit: cover;
-          }
+      .tools {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 0.2rem;
+        justify-content: center;
+
+        .toolsName {
+          font-size: x-small;
+          text-align: center;
+          padding: 0.3rem 0.5rem;
+          margin-bottom: 1.2rem;
+          margin-right: 1rem;
+          background: var(--gray-light);
+          border-radius: 5px;
+          font-weight: 400;
         }
+      }
 
-        .projectsRowContent {
-          display: flex;
-          padding: 1rem 0;
-          justify-content: center;
-          flex-direction: column;
-          align-items: center;
+      .livBtn {
+        width: 200px;
+        height: 60px;
+        color: var(--white);
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 2px;
+        background-color: var(--navy);
+        border: 2px solid var(--navy);
+        transition: var(--transition);
 
-          .projectsRowContentTitle {
-            letter-spacing: 2px;
-            font-weight: 600;
-            font-size: 1.5rem;
-            padding-bottom: 1rem;
-          }
-
-          .projectsRowContentDesc {
-            font-family: var(--font-mono);
-            font-size: 1rem;
-            color: var(--dark-slate);
-            max-width: 60rem;
-            line-height: 1.5;
-            margin-bottom: 0.5rem;
-            text-align: center;
-          }
-
-          .btn {
-            text-align: left;
-
-            button {
-              width: 200px;
-              height: 60px;
-              color: var(--white);
-              text-transform: uppercase;
-              font-weight: 700;
-              letter-spacing: 2px;
-              background-color: var(--navy);
-              border: 2px solid var(--navy);
-              transition: var(--transition);
-            }
-
-            button:hover {
-              box-shadow: var(--btnShadow);
-              background-color: transparent;
-              color: var(--navy);
-              font-size: 1.2rem;
-            }
-          }
-        }
-        .toolTitle {
-          font-weight: bold;
+        &:hover {
+          box-shadow: var(--btnShadow);
+          background-color: transparent;
           color: var(--navy);
-        }
-        .tools {
-          display: flex;
-          flex-wrap: wrap;
-          padding-bottom: 0.2rem;
-
-          .toolsName {
-            font-size: x-small;
-            text-align: center;
-            padding: 0.3rem 0.5rem;
-            margin-bottom: 1.2rem;
-            margin-right: 1rem;
-            background: var(--gray-light);
-            border-radius: 5px;
-            font-weight: 400;
-          }
+          font-size: 1.2rem;
         }
       }
     }
@@ -158,14 +130,13 @@
       .headingMain {
         font-size: 3.5rem;
         font-weight: 600;
-        
+
         &::after {
           top: calc(100% + 1.5rem);
           height: 7px;
           width: 4rem;
         }
       }
-
 
       .headingSub {
         -webkit-line-clamp: 2;
@@ -175,29 +146,18 @@
       }
     }
 
-    .projectsContent {
-      display: block;
-      padding: 3rem 5rem;
+    app-project-items {
+      .projectsRowContentTitle {
+        font-weight: 700;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
 
-      .projectsRow {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        grid-gap: 4rem;
-        // place-items: left;
-
-        .projectsRowContent {
-          place-items: start;
-
-          .projectsRowContentTitle {
-            font-weight: 700;
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-          }
-
-          .projectsRowContentDesc {
-            text-align: left;
-          }
-        }
+      .projectsRowContentDesc {
+        text-align: left;
+      }
+      .tools {
+        justify-content: left;
       }
     }
   }

@@ -85,13 +85,23 @@
           cursor: pointer;
           font-size: var(--font-mono);
           transition: var(--transition);
+          text-decoration: line-through;
           opacity: 0;
           animation: var(--slideTop);
 
-          &:hover {
-            color: var(--white-gray);
-            letter-spacing: 3px;
+          &::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            background-color: var(--navy);
+            border-left: 2px solid var(--green);
+            animation: typing 3.5s steps(12) infinite;
+            // animation-timing-function: ease-out;
+            animation-delay: 2s;
           }
+
         }
       }
 
@@ -214,5 +224,12 @@
         }
       }
     }
+  }
+}
+
+@keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 -20px 0 20px;
   }
 }

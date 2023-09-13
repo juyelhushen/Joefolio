@@ -9,7 +9,10 @@ import { TopbarComponent } from '../topbar/topbar.component';
   styleUrls: ['./sidenavbar.component.scss'],
 })
 export class SidenavbarComponent {
-  
+
+  radius: number = 20;
+  color: string = '#00909c';
+
   @ViewChild(TopbarComponent) topbar!: TopbarComponent;
 
   public isMobile = false;

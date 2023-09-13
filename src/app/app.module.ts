@@ -16,6 +16,7 @@ import { TopbarComponent } from './layout/topbar/topbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 import { ResumeComponent } from './components/resume/resume.component';
+import { ProjectItemsComponent } from './components/projects/project-items/project-items.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ResumeComponent } from './components/resume/resume.component';
     FooterComponent,
     ResponsiveDirective,
     ConfirmationComponent,
-    ResumeComponent
+    ResumeComponent,
+    ProjectItemsComponent
   ],
   imports: [
     BrowserModule,

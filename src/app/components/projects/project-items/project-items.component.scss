@@ -1,0 +1,62 @@
+:host {
+  .projectItemContainer {
+    display: flex;
+    color: var(--navy);
+    height: auto;
+    position: relative;
+    flex-direction: column;
+    background-color: var(--white);
+
+    .projectsContent {
+      display: block;
+      padding: 1rem 2rem;
+
+      .projectsRow {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        margin-bottom: 1rem;
+
+        .projectsRowImgCont {
+          overflow: hidden;
+        }
+
+        .projectsRowContent {
+          display: flex;
+          padding: 1rem 0;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+
+          .toolTitle {
+            font-weight: bold;
+            color: var(--navy);
+          }
+
+          .btn {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+:host.pc {
+  .projectItemContainer {
+    .projectsContent {
+      display: block;
+      padding: 3rem 5rem;
+
+      .projectsRow {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        grid-gap: 4rem;
+
+        .projectsRowContent {
+          place-items: start;
+        }
+      }
+    }
+  }
+}
