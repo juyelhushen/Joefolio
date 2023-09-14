@@ -2,13 +2,15 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { TopbarComponent } from '../topbar/topbar.component';
+import { RippleGlobalOptions } from '@angular/material/core';
 
 @Component({
   selector: 'app-sidenavbar',
   templateUrl: './sidenavbar.component.html',
   styleUrls: ['./sidenavbar.component.scss'],
 })
-export class SidenavbarComponent {
+export class SidenavbarComponent   {
+
 
   radius: number = 20;
   color: string = '#00909c';

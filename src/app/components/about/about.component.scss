@@ -74,9 +74,10 @@
         }
 
         .aboutContentDetails {
+
           .aboutContentDetailsPara {
             font-size: 1rem;
-            color: var(--gray);
+            color: var(--dark-blue);
             max-width: 60rem;
             line-height: 1.5;
             margin-bottom: 1rem;
@@ -128,14 +129,16 @@
             padding: 0.7rem 1rem;
             margin-bottom: 1.2rem;
             margin-right: 1rem;
-            background: rgba(153, 153, 153, 0.2);
+            // background: var(--gray-light);
             border-radius: 5px;
             font-weight: 500;
+            filter: drop-shadow(10px 10px 20px rgb(97, 140, 160));
 
             img {
               margin: 0 auto;
               width: 50px;
               height: auto;
+              // box-shadow: 10px 10px 20px black;
               -webkit-filter: grayscale(100%);
               filter: grayscale(100%) contrast(1);
               -webkit-transition: var(--transition);

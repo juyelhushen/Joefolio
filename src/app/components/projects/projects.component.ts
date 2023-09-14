@@ -46,6 +46,9 @@ export class ProjectsComponent {
       name: 'React',
     },
     {
+      name: 'Jhipster',
+    },
+    {
       name: 'Redis',
     },
     {

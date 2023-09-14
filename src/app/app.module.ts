@@ -17,6 +17,19 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { ProjectItemsComponent } from './components/projects/project-items/project-items.component';
+import {
+  MAT_RIPPLE_GLOBAL_OPTIONS,
+  RippleGlobalOptions,
+} from '@angular/material/core';
+
+const globalRippleConfig: RippleGlobalOptions = {
+  disabled: false,
+  terminateOnPointerUp: false,
+  animation: {
+    enterDuration: 300,
+    exitDuration: 1000,
+  },
+};
 
 @NgModule({
   declarations: [
@@ -31,16 +44,18 @@ import { ProjectItemsComponent } from './components/projects/project-items/proje
     ResponsiveDirective,
     ConfirmationComponent,
     ResumeComponent,
-    ProjectItemsComponent
+    ProjectItemsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: globalRippleConfig },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

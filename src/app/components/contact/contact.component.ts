@@ -44,8 +44,8 @@ export class ContactComponent {
       message: formData.message,
     });
     this.router.navigate(['/confirm']);
-    this.responseMessage = 'Thank you .';
-    this.snackbar.openSnackBar(this.responseMessage, '');
+    // this.responseMessage = 'Thank you .';
+    // this.snackbar.openSnackBar(this.responseMessage, '');
     this.contactForm.reset();
   }
 }
