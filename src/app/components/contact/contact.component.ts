@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Globalconstant } from 'src/app/shared/global-constant';
 import emailjs from '@emailjs/browser';
-import { Contact } from 'src/app/models/contact';
 import { environment } from 'src/environments/environment';
 import { SnackbarService } from 'src/app/services/snackbar.service';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-contact',
@@ -22,7 +22,7 @@ export class ContactComponent {
     private fb: FormBuilder,
     private snackbar: SnackbarService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.contactForm = this.fb.group({
@@ -33,7 +33,7 @@ export class ContactComponent {
     });
   }
 
-  async onSubmit() {
+  onSubmit = async (): Promise<void> => {
     emailjs.init(this.key);
     const formData = this.contactForm.value;
     let response = await emailjs.send('service_groma9h', 'template_94r6juq', {
@@ -47,5 +47,5 @@ export class ContactComponent {
     // this.responseMessage = 'Thank you .';
     // this.snackbar.openSnackBar(this.responseMessage, '');
     this.contactForm.reset();
-  }
+  };
 }

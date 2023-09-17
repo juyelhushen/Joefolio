@@ -3,13 +3,11 @@ import {
   Component,
   ElementRef,
   EventEmitter,
-  HostListener,
   Output,
   Renderer2,
   ViewChild,
 } from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
-
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-topbar',
@@ -17,10 +15,12 @@ import { MatSidenav } from '@angular/material/sidenav';
   styleUrls: ['./topbar.component.scss'],
 })
 export class TopbarComponent {
-
   isMenuOpen: boolean = false;
-
   isMobile: boolean = false;
+
+  @ViewChild('indicator') indicator!: ElementRef;
+
+  private subscription!: Subscription;
 
   @Output() sidenavToggle = new EventEmitter<void>();
 
@@ -31,14 +31,31 @@ export class TopbarComponent {
   ) {}
 
   ngAfterViewInit() {
-    this.observer.observe(['(max-width: 800px)']).subscribe((res) => {
-      this.isMobile = res.matches;
+    this.subscription = this.observer
+      .observe(['(max-width: 800px)'])
+      .subscribe((res) => {
+        this.isMobile = res.matches;
+      });
+  }
+
+  setActive = (id: string) => {
+    const navLink = this.el.nativeElement.querySelectorAll('.navItems a');
+    navLink.forEach((e: HTMLElement) => {
+      this.renderer.removeClass(e, 'active');
     });
+    const activeLink = this.el.nativeElement.querySelector(
+      `.navItems a[href='#${id}']`
+    );
+    this.renderer.addClass(activeLink, 'active');
+  };
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
   toggleSidenav = () => {
     let menu = this.el.nativeElement.querySelector('#humMenu');
-    this.renderer.addClass(menu,'openMenu');
+    this.renderer.addClass(menu, 'openMenu');
     this.isMenuOpen = !this.isMenuOpen;
     this.sidenavToggle.emit();
   };

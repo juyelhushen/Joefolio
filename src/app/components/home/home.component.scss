@@ -219,6 +219,7 @@
             color: var(--green);
             font-size: 1rem;
             box-shadow: 0 5px 15px 0 rgb(28 2 2 / 88%);
+            transform: translateY(-5px);
 
             span {
               width: 100%;
@@ -279,6 +280,7 @@
       right: 20px;
       bottom: 0;
       width: 40px;
+      transition: var(--transition);
 
       a {
         margin: 20px auto;
@@ -298,7 +300,6 @@
 
         &:hover {
           color: var(--green);
-          transform: translateY(-5px);
         }
       }
 
@@ -312,6 +313,10 @@
         opacity: 0;
         animation:  var(--slideLeft);
         animation-delay: 1.5s;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
       }
     }
 

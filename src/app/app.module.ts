@@ -8,7 +8,6 @@ import { SidenavbarComponent } from './layout/sidenavbar/sidenavbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
-import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ResponsiveDirective } from './directives/responsive.directive';
 import { MaterialModule } from './shared/material-module';
@@ -21,6 +20,7 @@ import {
   MAT_RIPPLE_GLOBAL_OPTIONS,
   RippleGlobalOptions,
 } from '@angular/material/core';
+import { ContactComponent } from './components/contact/contact.component';
 
 const globalRippleConfig: RippleGlobalOptions = {
   disabled: false,
@@ -39,12 +39,12 @@ const globalRippleConfig: RippleGlobalOptions = {
     HomeComponent,
     AboutComponent,
     ProjectsComponent,
-    ContactComponent,
     FooterComponent,
     ResponsiveDirective,
     ConfirmationComponent,
     ResumeComponent,
     ProjectItemsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

@@ -61,6 +61,13 @@
         width: 100%;
         display: block;
         object-fit: cover;
+        overflow: hidden;
+        transform: scaleX(0.9) scaleY(0.9);
+        transition: all ease 1s;
+
+        &:hover {
+          transform: scaleX(1) scaleY(1);
+        }
       }
 
       .projectsRowContentTitle {

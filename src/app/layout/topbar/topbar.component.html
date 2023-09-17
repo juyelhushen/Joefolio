@@ -23,12 +23,13 @@
       <span class="spacer"></span>
       <div class="navItems" *ngIf="!isMobile">
         <ul>
-          <li><a style="--i: 1" href="#home">Home</a></li>
-          <li><a style="--i: 2" href="#about">About</a></li>
-          <li><a style="--i: 3" href="#projects">Projects</a></li>
-          <li><a style="--i: 4" href="#contact">Contact</a></li>
+          <li><a style="--i: 1" href="#home" (click)="setActive('home')">Home</a></li>
+          <li><a style="--i: 2" href="#about" (click)="setActive('about')">About</a></li>
+          <li><a style="--i: 3" href="#projects" (click)="setActive('projects')">Projects</a></li>
+          <li><a style="--i: 4" href="#contact" (click)="setActive('contact')">Contact</a></li>
         </ul>
       </div>
+
 
       <div
         id="humMenu"
