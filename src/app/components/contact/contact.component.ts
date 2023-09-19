@@ -15,6 +15,8 @@ import { Router } from '@angular/router';
 export class ContactComponent {
   responseMessage: any;
   key = environment.emailJSKey;
+  serviceId = environment.mailService;
+  templateId = environment.templateId;
 
   contactForm: any = FormGroup;
 
@@ -36,16 +38,17 @@ export class ContactComponent {
   onSubmit = async (): Promise<void> => {
     emailjs.init(this.key);
     const formData = this.contactForm.value;
-    let response = await emailjs.send('service_groma9h', 'template_94r6juq', {
+    let response = await emailjs.send(this.serviceId, this.templateId, {
       from_name: formData.name,
       to_name: 'Juyel',
       from_email: formData.email,
       subject: formData.subject,
       message: formData.message,
     });
-    this.router.navigate(['/confirm']);
-    // this.responseMessage = 'Thank you .';
-    // this.snackbar.openSnackBar(this.responseMessage, '');
-    this.contactForm.reset();
+
+    if (this.contactForm.valid) {
+      this.router.navigate(['/confirm']);
+      this.contactForm.reset();
+          }
   };
 }

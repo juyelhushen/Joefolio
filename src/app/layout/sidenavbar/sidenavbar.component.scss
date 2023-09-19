@@ -13,6 +13,7 @@ mat-drawer-content {
   position: fixed;
   width: 100%;
   clip-path: circle(400px at right 30px);
+  height: 100vh;
   background-color: var(--navy);
 
   .drawerInfo {
@@ -24,27 +25,27 @@ mat-drawer-content {
     ul {
       display: flex;
       flex-direction: column;
-      margin-top: -14rem;
+      margin-top: -10rem;
       margin-left: 7rem;
       color: var(--green);
       font-size: 20px;
 
       li {
-        margin: 1em;
+        margin: .5em;
         list-style: none;
 
         a {
           font-family: var(--font-mono);
           text-transform: uppercase;
-          font-size: 30px;
+          font-size: 20px;
           letter-spacing: 2px;
           font-weight: 500;
           text-decoration: none;
-          padding: 0.2em 1.2em 0.9em 1.2em;
           border-radius: 10px 10px 0 0;
           color: var(--green);
-          transition: all 0.3s ease;
           position: relative;
+          transition: var(--transition);
+          transition-delay: 1s;
           z-index: 1;
 
           &:hover {
@@ -58,13 +59,15 @@ mat-drawer-content {
   }
 }
 
+
+
 @media (300px <= width <= 400px) {
   .circularDrawer {
-    clip-path: circle(350px at right 30px);
+    clip-path: circle(400px at right 30px);
 
     .drawerInfo {
       ul {
-        margin-top: -29rem;
+        margin-top: -25rem;
         margin-left: 9rem;
       }
     }
