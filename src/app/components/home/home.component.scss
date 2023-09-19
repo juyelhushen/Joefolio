@@ -68,49 +68,57 @@
           }
         }
 
-        &:nth-child(1):hover .icon {
-          background-color: var(--fb);
+        &:nth-child(1):hover {
+          .icon {
+            background-color: var(--fb);
+          }
+          span {
+            color: var(--fb);
+          }
         }
-        &:nth-child(2):hover .icon {
-          background-color: var(--lin);
-        }
-        &:nth-child(3):hover .icon {
-          background: var(--instaBg);
-        }
-        &:nth-child(4):hover .icon {
-          background-color: var(--github);
-        }
-        &:nth-child(5):hover .icon {
-          background-color: var(--youtube);
+        &:nth-child(2):hover {
+          .icon {
+            background-color: var(--lin);
+          }
+          span {
+            color: var(--lin);
+          }
         }
 
-        // span text
-
-        &:nth-child(1):hover span {
-          color: var(--fb);
+        &:nth-child(3):hover {
+          .icon {
+            background: var(--instaBg);
+          }
+          span {
+            color: var(insta);
+          }
         }
-        &:nth-child(2):hover span {
-          color: var(--lin);
+        &:nth-child(4):hover {
+          .icon {
+            background-color: var(--github);
+          }
+          span {
+            color: var(--github);
+          }
         }
-        &:nth-child(3):hover span {
-          color: var(insta);
-        }
-        &:nth-child(4):hover span {
-          color: var(--github);
-        }
-        &:nth-child(5):hover span {
-          color: var(--youtube);
+        &:nth-child(5):hover {
+          .icon {
+            background-color: var(--youtube);
+          }
+          span {
+            color: var(--youtube);
+          }
         }
       }
 
       .fbBtn {
         opacity: 0;
-        animation:  var(--slideBottom);
+        animation: var(--slideBottom);
         animation-delay: 1.5s;
       }
       .linBtn {
         opacity: 0;
-        animation:  var(--slideTop);
+        animation: var(--slideTop);
         animation-delay: 1.5s;
       }
       .instaBtn {
@@ -120,12 +128,12 @@
       }
       .gitBtn {
         opacity: 0;
-        animation:  var(--slideRight);
+        animation: var(--slideRight);
         animation-delay: 1.5s;
       }
       .youBtn {
         opacity: 0;
-        animation:  var(--slideTop);
+        animation: var(--slideTop);
         animation-delay: 1.5s;
       }
     }
@@ -311,7 +319,7 @@
         margin: 0px auto;
         background-color: var(--navy);
         opacity: 0;
-        animation:  var(--slideLeft);
+        animation: var(--slideLeft);
         animation-delay: 1.5s;
       }
 
