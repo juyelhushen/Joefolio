@@ -184,6 +184,9 @@
           overflow: hidden;
           color: var(--dark-gray);
           text-align: center;
+          opacity: 0;
+          animation: var(--slideLeft);
+          transition: var(--transition);
         }
       }
 
