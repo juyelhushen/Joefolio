@@ -33,11 +33,11 @@
       data-aos-offset="100"
       data-aos-once="true"
     >
-      <form
+      <!-- <form
         action="javacript:void(0)"
         class="contactForm"
         (submit)="onSubmit()"
-      >
+      > -->
         <mat-grid-list
           cols="4"
           rowHeight="80px"
@@ -134,6 +134,7 @@
             <div class="btn">
               <button
                 type="submit"
+                (click)='onSubmit()'
                 [disabled]="!(contactForm.valid && contactForm.dirty)"
               >
                 Send
@@ -141,7 +142,7 @@
             </div>
           </mat-grid-tile>
         </mat-grid-list>
-      </form>
+      <!-- </form> -->
     </div>
   </div>
 </div>

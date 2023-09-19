@@ -6,7 +6,6 @@ import { environment } from 'src/environments/environment';
 import { SnackbarService } from 'src/app/services/snackbar.service';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -17,6 +16,7 @@ export class ContactComponent {
   key = environment.emailJSKey;
   serviceId = environment.mailService;
   templateId = environment.templateId;
+  toMail: string = 'Juyel';
 
   contactForm: any = FormGroup;
 
@@ -24,7 +24,7 @@ export class ContactComponent {
     private fb: FormBuilder,
     private snackbar: SnackbarService,
     private router: Router
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.contactForm = this.fb.group({
@@ -40,15 +40,12 @@ export class ContactComponent {
     const formData = this.contactForm.value;
     let response = await emailjs.send(this.serviceId, this.templateId, {
       from_name: formData.name,
-      to_name: 'Juyel',
+      to_name: this.toMail,
       from_email: formData.email,
       subject: formData.subject,
       message: formData.message,
     });
-
-    if (this.contactForm.valid) {
-      this.router.navigate(['/confirm']);
-      this.contactForm.reset();
-          }
+    this.router.navigate(['/confirm']);
+    this.contactForm.reset();
   };
 }

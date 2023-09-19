@@ -3,13 +3,13 @@
     display: block;
     width: 100%;
     z-index: 1000;
-    position: relative;
+    position: fixed;
 
     .header {
       display: flex;
       max-width: 1500px;
       height: 5rem;
-      position: fixed;
+      // position: fixed;
       background: var(--navy);
       box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
       transition: all 0.3s linear;
@@ -165,7 +165,7 @@
 :host.pc {
   .headerContainer {
     .header {
-      height: 6rem;
+      height: 5rem;
 
       .navItems {
         display: flex;
@@ -235,6 +235,7 @@
     }
   }
 }
+
 
 @keyframes typing {
   100% {
