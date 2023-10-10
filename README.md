@@ -1,14 +1,17 @@
 <div align="center">
+  <img alt="Logo" src="./src/assets/img/icon.png" width="100" />
+</div>
+<div align="center">
   <p>Check this on live</p>
 </div>
 <h1 align="center">
-     joefolio.netlify.app
-</h1>
+     <a href="https://juyelhushen.netlify.app/">👉Joefolio</a>
+     </h1>
 <p align="center">
   A simple Developer portfolio of built with <a href="https://angular.io/" target="_blank">Angular</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
 </p>
 
-![demo](https://github.com/juyelhushen/Joefolio/blob/main/src/assets/img/joefolio.jpeg)
+![demo](./src/assets/img/demo.png)
 
 ## 🚨 Forking this repo (please read!)
 

@@ -3,22 +3,24 @@ export const environment = {
 
   // socialLinks
 
-  fbLink: 'https://www.facebook.com/mahammad.juyel.1/',
-  instaLink: 'https://www.instagram.com/iamjuyel/',
-  youtubeLink: 'https://www.youtube.com/channel/UCKuZogE-0ye5wpY0_JMdcIg',
-  linkedinLink: 'https://www.linkedin.com/in/juyel-hushen-770674170/',
-  githubLink: 'https://github.com/juyelhushen',
+  fbLink: 'Enter your social link',
+  instaLink: 'Enter your social link',
+  youtubeLink: 'Enter your social link',
+  linkedinLink: 'Enter your social link',
+  githubLink: 'Enter your social link',
 
-  // email
-  mailService: 'service_groma9h',
-  templateId: 'template_94r6juq',
-  emailJSKey: '_wNNTpyuKCY1QjQGI',
+  // email js
+
+  // create email js acccount
+
+  mailService: 'input this details from your email js account',
+  templateId: 'nput this details from your email js account',
+  emailJSKey: 'nput this details from your email js account',
 
   // project
 
-  finmart: 'https://finmart.ae/',
-  corban: 'http://13.232.170.246:4500/',
-  biriyumee:
-    'https://personal-hekanzay.outsystemscloud.com/BiriyaniExchange_ui/login',
-  joefolio: 'https://github.com/juyelhushen/Joefolio.git',
+  projectOne: 'https://www.flipkart.com/',
+  projectTwo: 'https://www.flipkart.com/',
+  projectThree:
+    'https://www.flipkart.com/',
 };

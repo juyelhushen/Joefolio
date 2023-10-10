@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent {
-  finTools: Tools[] = [
+  firstPoject: Tools[] = [
     {
       name: 'Java',
     },
@@ -35,7 +35,7 @@ export class ProjectsComponent {
     },
   ];
 
-  corTools: Tools[] = [
+  secoundProject: Tools[] = [
     {
       name: 'Java',
     },
@@ -71,7 +71,7 @@ export class ProjectsComponent {
     },
   ];
 
-  joeTools: Tools[] = [
+  thirdProject: Tools[] = [
     {
       name: 'HTML',
     },
@@ -87,28 +87,17 @@ export class ProjectsComponent {
     {
       name: 'Aungular Material',
     },
-    {
-      name: 'AOS',
-    },
   ];
 
-  birTools: Tools[] = [
-    {
-      name: 'outsystem',
-    },
-  ]
-  finmart = () => {
-    window.open(environment.finmart, '_blank');
+  projectOne = () => {
+    window.open(environment.projectOne, '_blank');
   };
 
-  corban = () => {
-    window.open(environment.corban, '_blank');
+  projectTwo = () => {
+    window.open(environment.projectTwo, '_blank');
   };
 
-  joefolio = () => {
-    window.open(environment.joefolio, '_blank');
-  };
-  biriyumee = () => {
-    window.open(environment.biriyumee, '_blank');
+  projectThree = () => {
+    window.open(environment.projectThree, '_blank');
   };
 }
