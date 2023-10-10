@@ -22,6 +22,15 @@ I value keeping my site open source, but as you all know, _**plagiarism is bad**
 ### TL;DR
 
 Yes, you can fork this repo.
+
+# Tool
+  -> HTML
+  -> SCSS
+  -> TypeScript
+  -> Angular 15
+  -> Angular Material
+  -> AOS (Animation On Scrolling)
+
 # Joefolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
