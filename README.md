@@ -23,13 +23,17 @@ I value keeping my site open source, but as you all know, _**plagiarism is bad**
 
 Yes, you can fork this repo.
 
-# Tool
-  -> HTML
-  -> SCSS
-  -> TypeScript
-  -> Angular 15
-  -> Angular Material
-  -> AOS (Animation On Scrolling)
+## Technologies used 🛠️
+
+- **HTML** 🚀
+- **SCSS** 🚀
+- **TypeScript** 🚀
+- **Angular 15**
+- **Angular Material**🚀
+- **AOS**🚀
+- **EmailJS**🚀
+
+---
 
 # Joefolio
 
